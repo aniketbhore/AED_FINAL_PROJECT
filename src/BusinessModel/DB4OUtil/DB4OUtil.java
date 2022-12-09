@@ -4,8 +4,8 @@
  */
 package BusinessModel.DB4OUtil;
 
-import Business.Model.Ecosystem;
-import Business.Model.SystemConfiguration;
+import Business_Model.Ecosystem;
+import Business_Model.SystemConfiguration;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
