@@ -4,7 +4,9 @@
  */
 package MainUserInterface;
 
+import BusinessModel.DB4OUtil.DB4OUtil;
 import BusinessModel.UserAccount.User;
+import Business_Model.Ecosystem;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 
@@ -13,15 +15,25 @@ import javax.swing.JOptionPane;
  * @author nehashende
  */
 public class MainJFrame extends javax.swing.JFrame {
-    
+    private final Ecosystem system;
+    private final DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     
     /**
      * Creates new form MainJFrame
      */
     public MainJFrame() {
         initComponents();
+        system = dB4OUtil.retrieveSystem();
         
         this.setSize(1680, 1050);
+        system.getUserAccountDirectory().createUser("bloodbank", "bloodbank", null, new BloodBank());
+        system.getUserAccountDirectory().createUser("pharmacy", "pharmacy", null, new Pharmacist());
+        system.getUserAccountDirectory().createUser("insurance", "insurance", null, new InsuranceManager());
+        system.getUserAccountDirectory().createUser("ambulance", "ambulance", null, new AmbulanceDriver());
+        system.getUserAccountDirectory().createUser("lab", "lab", null, new Lab());
+        system.getUserAccountDirectory().createUser("hos", "hos", null, new Reception());
+        system.getUserAccountDirectory().createUser("cop", "cop", null, new Police());
+        system.getUserAccountDirectory().createUser("doctor", "doctor", null, new DoctorsAdministrator());
     }
 
     /**
@@ -112,9 +124,11 @@ public class MainJFrame extends javax.swing.JFrame {
         userNameInputField.setText("");
         passwordInputField.setText("");
         
-        //mainContainer.add("logout", ua);
+        Logout ua = new Logout(mainContainer);
+        mainContainer.add("logout", ua);
         CardLayout layout = (CardLayout) mainContainer.getLayout();
         layout.next(mainContainer);
+        dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_signOutBtnActionPerformed
 
     private void userNameInputFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameInputFieldActionPerformed
@@ -123,12 +137,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void signInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInBtnActionPerformed
         // TODO add your handling code here:
-        
-        try{ 
-            //User ua = system.getUserAccountDirectory().authenticateUser(userNameInputField.getText(), passwordInputField.getText());
+       try{ 
+            User ua = system.getUserAccountDirectory().authenticateUser(userNameInputField.getText(), passwordInputField.getText());
             CardLayout layout = (CardLayout) mainContainer.getLayout();
-            //System.out.println("role of user ---"+ua.getRole());
-            //mainContainer.add(ua.getRole().createWorkArea(mainContainer, ua, system));
+            System.out.println("role of user ---"+ua.getRole());
+            mainContainer.add(ua.getRole().createWorkArea(mainContainer, ua, system));
             layout.next(mainContainer);
             signOutBtn.setEnabled(true);
         }
