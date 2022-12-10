@@ -4,6 +4,7 @@
  */
 package Business_Model;
 
+import BusinessModel.Employee.Employee;
 import BusinessModel.UserAccount.User;
 
 /**
