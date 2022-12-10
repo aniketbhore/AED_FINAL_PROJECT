@@ -4,6 +4,9 @@
  */
 package BusinessModel.UserAccount;
 
+import BusinessModel.Employee.Employee;
+import BusinessModel.Roles.Role;
+
 /**
  *
  * @author nehashende
@@ -14,8 +17,8 @@ public class User {
     private String password;
     private Employee employee;
     private Role role;
-    
-    public User(){
+
+    public User() {
     }
 
     public String getUsername() {
@@ -34,16 +37,24 @@ public class User {
         this.password = password;
     }
 
-    public String getEmployee() {
+    public Role getRole() {
+        return role;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(String employee) {
-        this.employee = employee;
-    }
-    
     @Override
-    public String toString(){
+    public String toString() {
         return username;
     }
 }
