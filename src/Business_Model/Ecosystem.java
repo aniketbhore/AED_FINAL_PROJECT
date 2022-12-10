@@ -4,6 +4,9 @@
  */
 package Business_Model;
 
+import BusinessModel.Doctor.DoctorDirectory;
+import BusinessModel.Insurance.InsuranceDirectory;
+import BusinessModel.Patient.PatientDirectory;
 import java.util.ArrayList;
 import javax.management.relation.Role;
 
