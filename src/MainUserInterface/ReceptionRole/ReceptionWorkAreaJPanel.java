@@ -3,34 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package MainUserInterface.ReceptionRole;
-
 import Business_Model.Ecosystem;
 
 import BusinessModel.Patient.Patient;
 import BusinessModel.UserAccount.User;
+import Business_Model.Ecosystem;
 
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import MainUserInterface.Ambulance.AmbulanceWorkAreaJPanel;
-
-
 /**
  *
  * @author aniketbhore
  */
 public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
-
-    /**
-     * Creates new form ReceptionWorkAreaJPanel
-     */
-   
-     private final JPanel userProcessContainer;
+private final JPanel userProcessContainer;
 
     private final Ecosystem ecoSystem;
     User userAccount;
-
+    /**
+     * Creates new form ReceptionWorkAreaJPanel
+     */
     public ReceptionWorkAreaJPanel(JPanel userProcessContainer, User account, Ecosystem system) {
 
         initComponents();
@@ -61,7 +56,6 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);}
         }
     }
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,115 +66,35 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
         createPatBtn = new javax.swing.JButton();
-        btnUpdate1 = new javax.swing.JButton();
-        delbtn = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        updateAmbulRecBtn = new javax.swing.JButton();
-        billPatBtn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         patientTable = new javax.swing.JTable();
+        billPatBtn = new javax.swing.JButton();
+        delBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        btnUpdate1 = new javax.swing.JButton();
+        updateAmbulRecBtn = new javax.swing.JButton();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("OFFICE");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(462, 46, -1, -1));
-
-        jLabel2.setText("Current Student List");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 148, -1, -1));
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        createPatBtn.setText("Create");
+        createPatBtn.setBackground(new java.awt.Color(0, 153, 204));
+        createPatBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        createPatBtn.setForeground(new java.awt.Color(255, 255, 255));
+        createPatBtn.setText("Create New Patient");
         createPatBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createPatBtnActionPerformed(evt);
             }
         });
 
-        btnUpdate1.setText("Update");
-        btnUpdate1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdate1ActionPerformed(evt);
-            }
-        });
-
-        delbtn.setText("Delete");
-        delbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                delbtnActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Discharge");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        updateAmbulRecBtn.setText("School Bus");
-        updateAmbulRecBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateAmbulRecBtnActionPerformed(evt);
-            }
-        });
-
-        billPatBtn.setText("Bill");
-        billPatBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                billPatBtnActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Discharged");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
-                    .addComponent(billPatBtn)
-                    .addComponent(updateAmbulRecBtn)
-                    .addComponent(jButton1)
-                    .addComponent(delbtn)
-                    .addComponent(btnUpdate1)
-                    .addComponent(createPatBtn))
-                .addContainerGap(117, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(createPatBtn)
-                .addGap(64, 64, 64)
-                .addComponent(btnUpdate1)
-                .addGap(59, 59, 59)
-                .addComponent(delbtn)
-                .addGap(85, 85, 85)
-                .addComponent(jButton1)
-                .addGap(92, 92, 92)
-                .addComponent(updateAmbulRecBtn)
-                .addGap(64, 64, 64)
-                .addComponent(billPatBtn)
-                .addGap(50, 50, 50)
-                .addComponent(jButton2)
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(921, 148, -1, -1));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Hospital ");
 
         patientTable.setBackground(new java.awt.Color(0, 153, 204));
         patientTable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -214,12 +128,169 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(patientTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 920, 640));
+        billPatBtn.setBackground(new java.awt.Color(0, 153, 204));
+        billPatBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        billPatBtn.setForeground(new java.awt.Color(255, 255, 255));
+        billPatBtn.setText("Bill the Patient");
+        billPatBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                billPatBtnActionPerformed(evt);
+            }
+        });
+
+        delBtn.setBackground(new java.awt.Color(0, 153, 204));
+        delBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        delBtn.setForeground(new java.awt.Color(255, 255, 255));
+        delBtn.setText("Delete Patient");
+        delBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delBtnActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.gray, java.awt.Color.darkGray, java.awt.Color.lightGray, java.awt.Color.darkGray));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Malayalam Sangam MN", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Perform an action");
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 204));
+        jButton1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Discharge a Patient");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jLabel2))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(jLabel2)
+                .addGap(352, 352, 352)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jLabel3.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Current Patients List");
+
+        jButton2.setBackground(new java.awt.Color(0, 153, 204));
+        jButton2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Discharged Patients");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        btnUpdate1.setBackground(new java.awt.Color(0, 153, 204));
+        btnUpdate1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnUpdate1.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdate1.setText("Update Patient");
+        btnUpdate1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdate1ActionPerformed(evt);
+            }
+        });
+
+        updateAmbulRecBtn.setBackground(new java.awt.Color(0, 153, 204));
+        updateAmbulRecBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        updateAmbulRecBtn.setForeground(new java.awt.Color(255, 255, 255));
+        updateAmbulRecBtn.setText("Ambulance Record");
+        updateAmbulRecBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateAmbulRecBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1240, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(20, 20, 20)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel3))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(40, 40, 40)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(delBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(createPatBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(billPatBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(updateAmbulRecBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnUpdate1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 810, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(30, 30, 30)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(10, 10, 10)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(280, 280, 280)
+                            .addComponent(delBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(70, 70, 70)
+                            .addComponent(createPatBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(590, 590, 590)
+                            .addComponent(billPatBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(480, 480, 480)
+                            .addComponent(updateAmbulRecBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(170, 170, 170)
+                            .addComponent(btnUpdate1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(700, 700, 700)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void createPatBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPatBtnActionPerformed
         // TODO add your handling code here:
-try{
+        try{
             CreatePatientJPanel createPatient = new CreatePatientJPanel(userProcessContainer, ecoSystem, userAccount);
             userProcessContainer.add("Add Patient", createPatient);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -227,29 +298,12 @@ try{
         }catch(Exception e){
             System.out.println("exception due to---"+e.getMessage());
         }
-        
-    }          
+
     }//GEN-LAST:event_createPatBtnActionPerformed
-
-    private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
-        // TODO add your handling code here:
- int selectedRow = patientTable.getSelectedRow();
-        if (selectedRow >= 0) {
-
-            Patient patient = (Patient) patientTable.getValueAt(selectedRow, 6);
-            UpdatePatientJPanel ambulanceWorkAreaJPanel = new UpdatePatientJPanel(userProcessContainer, ecoSystem, userAccount, patient);
-            userProcessContainer.add("Discharge", ambulanceWorkAreaJPanel);
-            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
-
-        } else {
-            JOptionPane.showMessageDialog(null, "Please Select a Patient!");
-        }
-    }//GEN-LAST:event_btnUpdate1ActionPerformed
 
     private void billPatBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billPatBtnActionPerformed
         // TODO add your handling code here:
- int selectedRow = patientTable.getSelectedRow();
+        int selectedRow = patientTable.getSelectedRow();
         if (selectedRow >= 0) {
 
             Patient patient = (Patient) patientTable.getValueAt(selectedRow, 6);
@@ -264,37 +318,61 @@ try{
         }
     }//GEN-LAST:event_billPatBtnActionPerformed
 
-    private void delbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delbtnActionPerformed
+    private void delBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_delBtnActionPerformed
         // TODO add your handling code here:
- int selectedRow = patientTable.getSelectedRow();
+        int selectedRow = patientTable.getSelectedRow();
         if (selectedRow >= 0) {
             int selectionButton = JOptionPane.YES_NO_OPTION;
             int selectionResult = JOptionPane.showConfirmDialog(null, "Delete User: " + "??", "Warning", selectionButton);
             if (selectionResult == JOptionPane.YES_OPTION) {
-                
+
                 Patient p = (Patient) patientTable.getValueAt(selectedRow, 6);
                 //System.out.print(p.getGender());
                 ecoSystem.getUserAccountDirectory().deleteUser(p.getpUserName());
-                //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0); 
+                //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
                 ecoSystem.getPatientDirectory().deletePatient(p);
                 populateNetworkTable();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Please Select a Patient!");
         }
-    }//GEN-LAST:event_delbtnActionPerformed
+    }//GEN-LAST:event_delBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
- ReceptionDischarge receptionDischarge = new ReceptionDischarge(userProcessContainer, userAccount, ecoSystem);
+        ReceptionDischarge receptionDischarge = new ReceptionDischarge(userProcessContainer, userAccount, ecoSystem);
         userProcessContainer.add("Discharge", receptionDischarge);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        PastRecords pastRecords = new PastRecords(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Past Records", pastRecords);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = patientTable.getSelectedRow();
+        if (selectedRow >= 0) {
+
+            Patient patient = (Patient) patientTable.getValueAt(selectedRow, 6);
+            UpdatePatientJPanel ambulanceWorkAreaJPanel = new UpdatePatientJPanel(userProcessContainer, ecoSystem, userAccount, patient);
+            userProcessContainer.add("Discharge", ambulanceWorkAreaJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Please Select a Patient!");
+        }
+    }//GEN-LAST:event_btnUpdate1ActionPerformed
+
     private void updateAmbulRecBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateAmbulRecBtnActionPerformed
         // TODO add your handling code here:
-try{
+        try{
             System.out.println("ambulance record button clicked");
             AmbulanceWorkAreaJPanel ambulanceWAJPanel = new AmbulanceWorkAreaJPanel(userProcessContainer, userAccount, ecoSystem);
             //AmbulanceWorkAreaJPanel ambulanceWorkAreaJPanel = new AmbulanceWorkAreaJPanel(userProcessContainer, userAccount, ecoSystem);
@@ -305,26 +383,20 @@ try{
         catch(Exception e){
             System.out.println("exception due to---"+e.getMessage());
         }
-    }//GEN-LAST:event_updateAmbulRecBtnActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
- PastRecords pastRecords = new PastRecords(userProcessContainer, userAccount, ecoSystem);
-        userProcessContainer.add("Past Records", pastRecords);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_updateAmbulRecBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton billPatBtn;
     private javax.swing.JButton btnUpdate1;
     private javax.swing.JButton createPatBtn;
-    private javax.swing.JButton delbtn;
+    private javax.swing.JButton delBtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable patientTable;
