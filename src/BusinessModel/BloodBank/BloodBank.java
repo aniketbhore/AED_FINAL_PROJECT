@@ -4,6 +4,7 @@
  */
 package BusinessModel.BloodBank;
 
+import BusinessModel.Patient.Patient;
 import java.util.ArrayList;
 
 /**
