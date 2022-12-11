@@ -90,26 +90,31 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Bookman Old Style", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setText("Inventory");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 190, 70));
 
         lblName.setBackground(new java.awt.Color(0, 0, 0));
         lblName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 0, 0));
         lblName.setText("Item Name");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 380, -1, 30));
         add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 380, 144, 30));
 
         lblName1.setBackground(new java.awt.Color(0, 0, 0));
         lblName1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblName1.setForeground(new java.awt.Color(204, 0, 0));
         lblName1.setText("Item Usage");
         add(lblName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, -1, 30));
         add(txtUsage, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, 144, 30));
 
         lblName3.setBackground(new java.awt.Color(0, 0, 0));
         lblName3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblName3.setForeground(new java.awt.Color(204, 0, 0));
         lblName3.setText("Quantity");
         add(lblName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 500, -1, 30));
 
@@ -122,6 +127,7 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
 
         lblName2.setBackground(new java.awt.Color(0, 0, 0));
         lblName2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblName2.setForeground(new java.awt.Color(204, 0, 0));
         lblName2.setText("Price");
         add(lblName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 550, -1, 30));
 
@@ -132,9 +138,8 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
         });
         add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 144, 30));
 
-        upBtn.setBackground(new java.awt.Color(15, 85, 177));
         upBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        upBtn.setForeground(new java.awt.Color(255, 255, 255));
+        upBtn.setForeground(new java.awt.Color(204, 0, 0));
         upBtn.setText("Update");
         upBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,9 +148,8 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
         });
         add(upBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 188, 40));
 
-        btnSubmit.setBackground(new java.awt.Color(15, 85, 177));
         btnSubmit.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(255, 255, 255));
+        btnSubmit.setForeground(new java.awt.Color(204, 0, 0));
         btnSubmit.setText("Add Medicine");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,9 +158,8 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
         });
         add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 450, 188, 40));
 
-        conBtn.setBackground(new java.awt.Color(15, 85, 177));
         conBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        conBtn.setForeground(new java.awt.Color(255, 255, 255));
+        conBtn.setForeground(new java.awt.Color(204, 0, 0));
         conBtn.setText("Save Update");
         conBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,9 +168,8 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
         });
         add(conBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 188, 43));
 
-        dBtn.setBackground(new java.awt.Color(15, 85, 177));
         dBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        dBtn.setForeground(new java.awt.Color(255, 255, 255));
+        dBtn.setForeground(new java.awt.Color(204, 0, 0));
         dBtn.setText("Delete");
         dBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,20 +207,24 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableTests);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 890, 186));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 960, 186));
 
         jButton2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(204, 0, 0));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 650, 170, 50));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 650, 170, 50));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1328, 10));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1021, 483, 213, 32));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1021, 543, 213, 32));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 381, 430, -1));
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 1240));
     }// </editor-fold>//GEN-END:initComponents
 

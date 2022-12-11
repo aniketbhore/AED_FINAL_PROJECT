@@ -74,55 +74,56 @@ public class ReceptionAmbulanceWorkAreaJPanel extends javax.swing.JPanel {
         Route_JButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 94, 218));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("REGISTER AN EMERGENCY");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 1432, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1432, 10));
 
         lblPatientFirstName.setBackground(new java.awt.Color(255, 255, 255));
-        lblPatientFirstName.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        lblPatientFirstName.setForeground(new java.awt.Color(255, 255, 255));
+        lblPatientFirstName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblPatientFirstName.setForeground(new java.awt.Color(204, 0, 0));
         lblPatientFirstName.setText("First Name");
         add(lblPatientFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, -1, -1));
 
         lblPatientLastName.setBackground(new java.awt.Color(255, 255, 255));
-        lblPatientLastName.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        lblPatientLastName.setForeground(new java.awt.Color(255, 255, 255));
+        lblPatientLastName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblPatientLastName.setForeground(new java.awt.Color(204, 0, 0));
         lblPatientLastName.setText("Last Name");
         add(lblPatientLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, -1, -1));
 
         lblPatientLocation.setBackground(new java.awt.Color(255, 255, 255));
-        lblPatientLocation.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        lblPatientLocation.setForeground(new java.awt.Color(255, 255, 255));
+        lblPatientLocation.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblPatientLocation.setForeground(new java.awt.Color(204, 0, 0));
         lblPatientLocation.setText("Location");
         add(lblPatientLocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 530, 174, -1));
 
         lblPatientPassword.setBackground(new java.awt.Color(255, 255, 255));
-        lblPatientPassword.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        lblPatientPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPatientPassword.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblPatientPassword.setForeground(new java.awt.Color(204, 0, 0));
         lblPatientPassword.setText("Patient Password");
         add(lblPatientPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 630, -1, -1));
 
         lblPatientUserName.setBackground(new java.awt.Color(255, 255, 255));
-        lblPatientUserName.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        lblPatientUserName.setForeground(new java.awt.Color(255, 255, 255));
+        lblPatientUserName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblPatientUserName.setForeground(new java.awt.Color(204, 0, 0));
         lblPatientUserName.setText("User Name");
         add(lblPatientUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 580, -1, 20));
 
-        btnSubmit.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(0, 153, 204));
+        btnSubmit.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnSubmit.setForeground(new java.awt.Color(204, 0, 0));
         btnSubmit.setText("SUBMIT");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 698, 154, 40));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 710, 154, 40));
         add(txtPatientPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 630, 250, 30));
         add(txtPatientUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 580, 250, 30));
 
@@ -135,15 +136,15 @@ public class ReceptionAmbulanceWorkAreaJPanel extends javax.swing.JPanel {
         add(txtPatientLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 250, 30));
         add(txtPatientFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, 250, 30));
 
-        Route_JButton.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        Route_JButton.setForeground(new java.awt.Color(0, 153, 204));
+        Route_JButton.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        Route_JButton.setForeground(new java.awt.Color(204, 0, 0));
         Route_JButton.setText("VIEW ROUTE");
         Route_JButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Route_JButtonActionPerformed(evt);
             }
         });
-        add(Route_JButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 530, 180, 40));
+        add(Route_JButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 710, 180, 40));
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 540, 300));
     }// </editor-fold>//GEN-END:initComponents
 
