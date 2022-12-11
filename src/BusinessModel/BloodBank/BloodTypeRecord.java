@@ -9,6 +9,7 @@ package BusinessModel.BloodBank;
  * @author JANVI
  */
 public class BloodTypeRecord {
+    
      private String bloodType;
     private int amount;
 
