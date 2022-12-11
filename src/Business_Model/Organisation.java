@@ -5,21 +5,22 @@
 package Business_Model;
 
 import BusinessModel.Employee.EmployeeDirectory;
+import BusinessModel.Roles.Role;
 import BusinessModel.UserAccount.UserDirectory;
 import java.util.ArrayList;
-import javax.management.relation.Role;
 
 /**
  *
  * @author aniketbhore
  */
 public abstract class Organisation {
+    
     private String OrganisationName;
     private EmployeeDirectory empDirectory;
     private UserDirectory userDirectory;
     private int organisationID;
     private static int counter = 0;
-
+    
     public enum Type {
         RestaurantAdmin("RestaurantAdmin"),
         Customer("Customer"),
