@@ -4,19 +4,22 @@
  */
 package MainUserInterface;
 
-import BusinessModel.BloodBank.BloodBank;
+import Business_Model.Ecosystem;
 import BusinessModel.DB4OUtil.DB4OUtil;
-import BusinessModel.Lab.Lab;
-import BusinessModel.ReceptionServices.Reception;
+import BusinessModel.Pharmacy.Pharmacy;
 import BusinessModel.Roles.AmbulanceDriver;
+import BusinessModel.Roles.BloodBank;
 import BusinessModel.Roles.DoctorsAdministrator;
 import BusinessModel.Roles.InsuranceManager;
+import BusinessModel.Roles.Lab;
+import BusinessModel.Roles.Patient_role;
 import BusinessModel.Roles.Pharmacist;
 import BusinessModel.Roles.Police;
+import BusinessModel.Roles.Reception;
 import BusinessModel.UserAccount.User;
-import Business_Model.Ecosystem;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -32,7 +35,6 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         system = dB4OUtil.retrieveSystem();
-        
         this.setSize(1680, 1050);
         system.getUserAccountDirectory().createUser("bloodbank", "bloodbank", null, new BloodBank());
         system.getUserAccountDirectory().createUser("pharmacy", "pharmacy", null, new Pharmacist());
