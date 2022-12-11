@@ -72,24 +72,28 @@ public class InsuranceWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         PatientTbl = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 129, 190));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("FELLOWSHIP DEPARTMENT");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 30, 1380, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 40, 1380, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 1380, 10));
 
-        recBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        recBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        recBtn.setForeground(new java.awt.Color(204, 0, 0));
         recBtn.setText("View Past Records");
         recBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recBtnActionPerformed(evt);
             }
         });
-        add(recBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 220, 90));
+        add(recBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 450, 220, 80));
 
-        jButton1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(204, 0, 0));
         jButton1.setText("View Details");
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +101,7 @@ public class InsuranceWorkAreaJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 220, 80));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 220, 80));
 
         PatientTbl.getTableHeader().setFont(new java.awt.Font("Trebuchet MS", 1, 16));
         PatientTbl.setFont(new java.awt.Font("Trebuchet MS", 1, 12));
@@ -129,7 +133,7 @@ public class InsuranceWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane4.setViewportView(PatientTbl);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 980, 260));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 980, 260));
     }// </editor-fold>//GEN-END:initComponents
 
     private void recBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recBtnActionPerformed

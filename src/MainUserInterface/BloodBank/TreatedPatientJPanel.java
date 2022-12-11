@@ -67,11 +67,13 @@ public class TreatedPatientJPanel extends javax.swing.JPanel {
         ManagePatientTable = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 129, 190));
+        setToolTipText("");
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("                REQUESTED PATIENTS HISTORY");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1260, 80));
@@ -107,7 +109,7 @@ public class TreatedPatientJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(ManagePatientTable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 1260, 191));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 1260, 191));
 
         btnBack.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnBack.setForeground(new java.awt.Color(0, 153, 204));

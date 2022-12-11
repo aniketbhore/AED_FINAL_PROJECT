@@ -99,12 +99,16 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
         managePatientTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("POLICE DEPATMENT");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1260, 80));
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 84, 1260, 30));
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, 130, 120));
 
@@ -141,9 +145,9 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(managePatientTable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 1260, 140));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 1290, 140));
 
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jButton1.setText("View Details of Verification");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +158,7 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel3.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
         jLabel3.setText("PAST RECORDS");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 313, 21));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 313, 21));
 
         managePatientTable1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         managePatientTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -185,16 +189,16 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane4.setViewportView(managePatientTable1);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 1260, 191));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 540, 1260, 191));
 
-        jButton2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jButton2.setText("View Details of Past Records");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 720, 310, 39));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 770, 310, 39));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
