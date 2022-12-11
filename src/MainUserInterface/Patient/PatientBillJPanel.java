@@ -59,15 +59,19 @@ public class PatientBillJPanel extends javax.swing.JPanel {
         BillTalble = new javax.swing.JTable();
         lblPatientName = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("BILL");
+        jLabel1.setText("BILLING INFORMATION");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, 1300, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1300, 10));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 1450, 420));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/istockphoto-1089688182-612x612.jpg")); // NOI18N
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 170, 610, 420));
 
         BillTalble.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         BillTalble.setModel(new javax.swing.table.DefaultTableModel(
@@ -98,7 +102,7 @@ public class PatientBillJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(BillTalble);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 640, 1294, 180));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 780, 230));
 
         lblPatientName.setBackground(new java.awt.Color(255, 255, 255));
         lblPatientName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N

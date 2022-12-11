@@ -71,23 +71,23 @@ public class LabPastRequestedTests extends javax.swing.JPanel {
         BillTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 102, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Patient Request");
+        jLabel1.setText("Student Request");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 18, 460, 40));
 
         jButton2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 153, 204));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 20, 140, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, 140, 40));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1400, 10));
 
         BillTable.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N

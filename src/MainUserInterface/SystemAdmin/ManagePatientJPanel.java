@@ -67,6 +67,7 @@ private final JPanel userProcessContainer;
         jScrollPane1 = new javax.swing.JScrollPane();
         ManageCustomersTable = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 102, 102));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 104, 172, 38));
 
@@ -74,7 +75,7 @@ private final JPanel userProcessContainer;
         lblManageCustomers.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
         lblManageCustomers.setForeground(new java.awt.Color(255, 255, 255));
         lblManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblManageCustomers.setText("                      Manage Customers");
+        lblManageCustomers.setText("                      Manage ");
         add(lblManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 0, 730, 70));
 
         txtUserName.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +93,6 @@ private final JPanel userProcessContainer;
         add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 239, 172, 40));
 
         btnSubmit.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(0, 153, 204));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
