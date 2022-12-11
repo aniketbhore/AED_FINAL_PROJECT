@@ -8,9 +8,22 @@ import BusinessModel.Ambulance.AmbulanceDirectory;
 import BusinessModel.BloodBank.BloodBank;
 import BusinessModel.Doctor.DoctorDirectory;
 import BusinessModel.Insurance.InsuranceDirectory;
+import BusinessModel.Lab.Lab;
 import BusinessModel.Patient.PatientDirectory;
+import BusinessModel.Pharmacy.Pharmacy;
+import BusinessModel.PoliceDepartment.PoliceDepartment;
+import BusinessModel.Roles.Role;
+import BusinessModel.Roles.Administrator;
+//import com.twilio.Twilio;
+//import com.twilio.rest.api.v2010.account.Message;
 import java.util.ArrayList;
-import javax.management.relation.Role;
+import java.util.Properties;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 /**
  *
