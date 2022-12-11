@@ -5,6 +5,8 @@
 package BusinessModel.Roles;
 
 import BusinessModel.UserAccount.User;
+import Business_Model.Ecosystem;
+import MainUserInterface.Police.PoliceWorkAreaJPanel;
 import javax.swing.JPanel;
 
 /**

@@ -4,12 +4,16 @@
  */
 package MainUserInterface.ReceptionRole;
 
-import BusinessModel.UserAccount.User;
 import Business_Model.Ecosystem;
+
+import BusinessModel.Patient.Patient;
+import BusinessModel.UserAccount.User;
+
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import MainUserInterface.Ambulance.AmbulanceWorkAreaJPanel;
 
 
 /**
@@ -70,8 +74,6 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        patientTable = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         createPatBtn = new javax.swing.JButton();
         btnUpdate1 = new javax.swing.JButton();
@@ -80,6 +82,8 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
         updateAmbulRecBtn = new javax.swing.JButton();
         billPatBtn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        patientTable = new javax.swing.JTable();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -88,24 +92,6 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel2.setText("Current Student List");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 148, -1, -1));
-
-        patientTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "First Name", "Last Name", "ID", "Age", "Email", "Status"
-            }
-        ));
-        jScrollPane1.setViewportView(patientTable);
-        if (patientTable.getColumnModel().getColumnCount() > 0) {
-            patientTable.getColumnModel().getColumn(4).setResizable(false);
-        }
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 229, 685, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -195,6 +181,40 @@ public class ReceptionWorkAreaJPanel extends javax.swing.JPanel {
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(921, 148, -1, -1));
+
+        patientTable.setBackground(new java.awt.Color(0, 153, 204));
+        patientTable.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        patientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        patientTable.setForeground(new java.awt.Color(255, 255, 255));
+        patientTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "First name", "Last name", "Insurance Id", "Age", "Email Id", "Status", "Ob"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(patientTable);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 920, 640));
     }// </editor-fold>//GEN-END:initComponents
 
     private void createPatBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPatBtnActionPerformed

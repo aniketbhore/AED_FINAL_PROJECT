@@ -113,6 +113,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         ErrorUserNameLbl = new javax.swing.JLabel();
         lblErrorAddress = new javax.swing.JLabel();
         ErrorPhoneLbl1 = new javax.swing.JLabel();
+        txtDOB = new com.toedter.calendar.JDateChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -395,6 +396,11 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
             }
         });
         add(ErrorPhoneLbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 170, 20));
+
+        txtDOB.setBackground(new java.awt.Color(204, 204, 204));
+        txtDOB.setDateFormatString("MM-dd-yyyy");
+        txtDOB.setMaxSelectableDate(new Date());
+        add(txtDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 260, 180, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void FirstNameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTxtActionPerformed
@@ -626,7 +632,14 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
     private void ErrorPhoneLbl1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ErrorPhoneLbl1KeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_ErrorPhoneLbl1KeyReleased
-
+public int CalculateAge(Date birthDate, Date currentDate) {
+        // validate inputs ...                                                                               
+        DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+        int d1 = Integer.parseInt(formatter.format(birthDate));
+        int d2 = Integer.parseInt(formatter.format(currentDate));
+        int age = (d2 - d1) / 10000;
+        return age;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AddressLbl;
@@ -666,6 +679,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblPhotoImage;
     private javax.swing.JLabel lblSpeciality;
     private javax.swing.JButton qualificationImageLbl;
+    private com.toedter.calendar.JDateChooser txtDOB;
     private javax.swing.JTextField txtDoctorID;
     // End of variables declaration//GEN-END:variables
 }

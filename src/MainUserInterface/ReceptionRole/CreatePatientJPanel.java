@@ -7,7 +7,7 @@ import Business_Model.Ecosystem;
 import BusinessModel.Patient.Patient;
 import BusinessModel.Roles.Patient_role;
 import BusinessModel.UserAccount.User;
-import BusinessUtil.Mail.SendMail;
+//import BusinessUtil.Mail.SendMail;
 import java.awt.CardLayout;
 import java.awt.Image;
 import java.io.File;
@@ -126,6 +126,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         jSeparator4 = new javax.swing.JSeparator();
         btnSubmit1 = new javax.swing.JButton();
         lblPaymentMethod1 = new javax.swing.JLabel();
+        txtDOB = new com.toedter.calendar.JDateChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -470,6 +471,11 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         lblPaymentMethod1.setForeground(new java.awt.Color(255, 255, 255));
         lblPaymentMethod1.setText("Payment Method");
         add(lblPaymentMethod1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, -1, -1));
+
+        txtDOB.setBackground(new java.awt.Color(204, 204, 204));
+        txtDOB.setDateFormatString("MM-dd-yyyy");
+        txtDOB.setMaxSelectableDate(new Date());
+        add(txtDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 110, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtHealthInsuranceIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHealthInsuranceIDActionPerformed
@@ -630,12 +636,12 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
 
             ecoSystem.getUserAccountDirectory().createUser(txtUserName.getText(), txtPassword.getText(), null, new Patient_role());
             ecoSystem.getPatientDirectory().createPatient(patient);
-            SendMail.sendMail(patient.getpEmailAddress(), "Hello "+patient.getpFirstName()+", your account has been successfully created in Hospital EcoSystem Management!");
-            for (Patient p : ecoSystem.getPatientDirectory().getPatientList()) {
-                if (p.getpUserName().equals(txtUserName.getText())) {
-                    ecoSystem.getPatientDirectory().AddBill(p, "Bed Charge", "Hospital", "Ammount");
-                }
-            }
+//            SendMail.sendMail(patient.getpEmailAddress(), "Hello "+patient.getpFirstName()+", your account has been successfully created in Hospital EcoSystem Management!");
+//            for (Patient p : ecoSystem.getPatientDirectory().getPatientList()) {
+//                if (p.getpUserName().equals(txtUserName.getText())) {
+//                    ecoSystem.getPatientDirectory().AddBill(p, "Bed Charge", "Hospital", "Ammount");
+//                }
+//            }
 
             JOptionPane.showMessageDialog(null, "Patient Created");
 
@@ -789,6 +795,7 @@ public int CalculateAge(Date birthDate, Date currentDate) {
     private javax.swing.JLabel lblRestaurantName5;
     private javax.swing.JTextField txtAccidentLocation;
     private javax.swing.JTextField txtAddress;
+    private com.toedter.calendar.JDateChooser txtDOB;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtHealthInsuranceID;

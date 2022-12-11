@@ -265,7 +265,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
         else
         {
             Patient patient = (Patient) managePatientTable1.getValueAt(selectedRowIndex, 0);
-            PharmacypastReq doctorRequestLabTestJPanel = new PharmacypastReq(userProcessContainer, userAccount,patient,ecosystem);
+            PharmacyPastRequest doctorRequestLabTestJPanel = new PharmacyPastRequest(userProcessContainer, userAccount,patient,ecosystem);
             userProcessContainer.add("Past Tests", doctorRequestLabTestJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);

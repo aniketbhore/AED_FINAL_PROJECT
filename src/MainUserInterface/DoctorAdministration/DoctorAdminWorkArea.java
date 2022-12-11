@@ -4,6 +4,8 @@
  */
 package MainUserInterface.DoctorAdministration;
 
+import BusinessModel.Doctor.Doctor;
+import BusinessModel.Patient.Patient;
 import BusinessModel.UserAccount.User;
 import Business_Model.Ecosystem;
 import java.awt.CardLayout;
