@@ -72,33 +72,38 @@ public class InsurancePastCustomers extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         patientTable = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 129, 190));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("FELLOWSHIP DEPARTMENT");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-230, 10, 1400, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-160, 30, 1400, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1400, 10));
 
-        viewDtlsBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        viewDtlsBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        viewDtlsBtn.setForeground(new java.awt.Color(204, 0, 0));
         viewDtlsBtn.setText("View Details");
         viewDtlsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewDtlsBtnActionPerformed(evt);
             }
         });
-        add(viewDtlsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 220, 80));
+        add(viewDtlsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 170, 60));
 
-        backBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        backBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        backBtn.setForeground(new java.awt.Color(204, 0, 0));
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
             }
         });
-        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 220, 80));
+        add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 430, 160, 60));
 
         patientTable.getTableHeader().setFont(new java.awt.Font("Trebuchet MS", 1, 16));
+        patientTable.setBackground(new java.awt.Color(204, 64, 86));
         patientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 12));
         patientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -128,7 +133,7 @@ public class InsurancePastCustomers extends javax.swing.JPanel {
         });
         jScrollPane4.setViewportView(patientTable);
 
-        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 990, 200));
+        add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 990, 200));
     }// </editor-fold>//GEN-END:initComponents
 
     private void viewDtlsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewDtlsBtnActionPerformed
