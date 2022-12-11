@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author aniketbhore
  */
-public class LabPastRequestedTest extends javax.swing.JPanel {
+public class LabPastRequestedTests extends javax.swing.JPanel {
 
     /**
      * Creates new form LabPastRequestedTest
