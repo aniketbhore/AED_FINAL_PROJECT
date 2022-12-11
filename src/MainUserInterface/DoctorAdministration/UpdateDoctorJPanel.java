@@ -81,16 +81,19 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
         doctorImageLbl = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblRestaurantName.setBackground(new java.awt.Color(0, 0, 0));
         lblRestaurantName.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblRestaurantName.setForeground(new java.awt.Color(255, 255, 255));
         lblRestaurantName.setText("First Name");
         jPanel1.add(lblRestaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 113, -1));
 
         lblRestaurantInfo.setBackground(new java.awt.Color(255, 255, 255));
-        lblRestaurantInfo.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        lblRestaurantInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
+        lblRestaurantInfo.setForeground(new java.awt.Color(255, 255, 255));
         lblRestaurantInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRestaurantInfo.setText("Update Doctor");
         jPanel1.add(lblRestaurantInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 22, 1154, -1));
@@ -98,6 +101,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblPhoneNumber.setBackground(new java.awt.Color(0, 0, 0));
         lblPhoneNumber.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblPhoneNumber.setForeground(new java.awt.Color(255, 255, 255));
         lblPhoneNumber.setText("Last Name");
         jPanel1.add(lblPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 380, 101, -1));
 
@@ -110,6 +114,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblAddress.setBackground(new java.awt.Color(0, 0, 0));
         lblAddress.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblAddress.setForeground(new java.awt.Color(255, 255, 255));
         lblAddress.setText("Age");
         jPanel1.add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, 40, -1));
 
@@ -122,6 +127,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblRestaurantName1.setBackground(new java.awt.Color(255, 255, 255));
         lblRestaurantName1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblRestaurantName1.setForeground(new java.awt.Color(255, 255, 255));
         lblRestaurantName1.setText("Gender");
         jPanel1.add(lblRestaurantName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 440, 80, -1));
 
@@ -134,8 +140,9 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblPhoneNumber1.setBackground(new java.awt.Color(255, 255, 255));
         lblPhoneNumber1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        lblPhoneNumber1.setText("Doctor Work ID");
-        jPanel1.add(lblPhoneNumber1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 310, -1, -1));
+        lblPhoneNumber1.setForeground(new java.awt.Color(255, 255, 255));
+        lblPhoneNumber1.setText("Work ID");
+        jPanel1.add(lblPhoneNumber1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 320, -1, -1));
 
         txtDoctorID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,6 +153,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblAddress1.setBackground(new java.awt.Color(255, 255, 255));
         lblAddress1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblAddress1.setForeground(new java.awt.Color(255, 255, 255));
         lblAddress1.setText("Phone Number");
         jPanel1.add(lblAddress1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 590, 147, 30));
 
@@ -158,6 +166,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblRestaurantName2.setBackground(new java.awt.Color(255, 255, 255));
         lblRestaurantName2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblRestaurantName2.setForeground(new java.awt.Color(255, 255, 255));
         lblRestaurantName2.setText("Date of Birth");
         jPanel1.add(lblRestaurantName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 570, -1, -1));
 
@@ -170,6 +179,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblPhoneNumber2.setBackground(new java.awt.Color(255, 255, 255));
         lblPhoneNumber2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblPhoneNumber2.setForeground(new java.awt.Color(255, 255, 255));
         lblPhoneNumber2.setText("Email");
         jPanel1.add(lblPhoneNumber2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 530, -1, -1));
 
@@ -182,6 +192,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblAddress2.setBackground(new java.awt.Color(255, 255, 255));
         lblAddress2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblAddress2.setForeground(new java.awt.Color(255, 255, 255));
         lblAddress2.setText("Specialist");
         jPanel1.add(lblAddress2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 640, -1, 30));
 
@@ -194,6 +205,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblAddress3.setBackground(new java.awt.Color(255, 255, 255));
         lblAddress3.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblAddress3.setForeground(new java.awt.Color(255, 255, 255));
         lblAddress3.setText("Address");
         jPanel1.add(lblAddress3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 500, 80, -1));
 
@@ -206,6 +218,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
 
         lblAddress4.setBackground(new java.awt.Color(255, 255, 255));
         lblAddress4.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblAddress4.setForeground(new java.awt.Color(255, 255, 255));
         lblAddress4.setText("Experience");
         jPanel1.add(lblAddress4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 650, 110, 30));
 
@@ -225,11 +238,11 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
         jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 174, 33));
 
         jLabel2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 115, 33));
 
         btnSubmit.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(0, 153, 204));
         btnSubmit.setText("Update");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,7 +252,6 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
         jPanel1.add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 760, 140, 40));
 
         doctorImageLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        doctorImageLbl.setText("doctor image");
         jPanel1.add(doctorImageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, 160, 140));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -254,8 +266,8 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 946, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 586, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

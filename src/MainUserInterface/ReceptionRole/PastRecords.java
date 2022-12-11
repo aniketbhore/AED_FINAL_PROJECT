@@ -69,24 +69,29 @@ private void populateNetworkTable() {
         jScrollPane1 = new javax.swing.JScrollPane();
         ManageCustomersTable = new javax.swing.JTable();
         lblManageCustomers = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(0, 102, 102));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnUpdateAmbulanceRecord1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
-        btnUpdateAmbulanceRecord1.setForeground(new java.awt.Color(0, 153, 204));
         btnUpdateAmbulanceRecord1.setText("Back");
         btnUpdateAmbulanceRecord1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateAmbulanceRecord1ActionPerformed(evt);
             }
         });
+        add(btnUpdateAmbulanceRecord1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 140, 50));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(961, 53, 1, 10));
 
-        btnUpdateAmbulanceRecord.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
-        btnUpdateAmbulanceRecord.setForeground(new java.awt.Color(0, 204, 204));
-        btnUpdateAmbulanceRecord.setText("Bill");
+        btnUpdateAmbulanceRecord.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 24)); // NOI18N
+        btnUpdateAmbulanceRecord.setText("BILL");
         btnUpdateAmbulanceRecord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateAmbulanceRecordActionPerformed(evt);
             }
         });
+        add(btnUpdateAmbulanceRecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 370, 160, 50));
 
         ManageCustomersTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManageCustomersTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -117,54 +122,18 @@ private void populateNetworkTable() {
         });
         jScrollPane1.setViewportView(ManageCustomersTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 136, 925, 191));
+
         lblManageCustomers.setBackground(new java.awt.Color(119, 197, 147));
         lblManageCustomers.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
         lblManageCustomers.setForeground(new java.awt.Color(255, 255, 255));
         lblManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblManageCustomers.setText("                      Manage Students");
+        add(lblManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 13, 590, 70));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(lblManageCustomers, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(75, 75, 75)
-                            .addComponent(btnUpdateAmbulanceRecord1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(59, 59, 59)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 925, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(320, 320, 320)
-                            .addComponent(btnUpdateAmbulanceRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblManageCustomers, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(10, 10, 10)
-                            .addComponent(btnUpdateAmbulanceRecord1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(53, 53, 53)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(86, 86, 86)
-                    .addComponent(btnUpdateAmbulanceRecord, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/Neu_logo.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 60, 230, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateAmbulanceRecord1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateAmbulanceRecord1ActionPerformed
@@ -204,6 +173,7 @@ private void populateNetworkTable() {
     private javax.swing.JTable ManageCustomersTable;
     private javax.swing.JButton btnUpdateAmbulanceRecord;
     private javax.swing.JButton btnUpdateAmbulanceRecord1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblManageCustomers;

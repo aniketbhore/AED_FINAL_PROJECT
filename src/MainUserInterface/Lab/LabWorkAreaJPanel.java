@@ -93,6 +93,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         managePatientTable1 = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(0, 102, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 79, 1295, 10));
 
@@ -131,11 +132,10 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Laboratory Center");
+        jLabel1.setText("Test Center");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 1295, -1));
 
         jButton2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 153, 204));
         jButton2.setText("View Request");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +150,6 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 163, 30));
 
         jButton1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 153, 204));
         jButton1.setText("Available Tests Info");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +164,6 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 185, 25));
 
         jButton3.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 153, 204));
         jButton3.setText("View Request");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

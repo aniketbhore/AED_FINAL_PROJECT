@@ -98,9 +98,11 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManageTeacher.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        lblManageTeacher.setForeground(new java.awt.Color(255, 255, 255));
         lblManageTeacher.setText("Assign Students to Teacher");
         add(lblManageTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
 
@@ -134,7 +136,7 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
                 btnCreateDoctorActionPerformed(evt);
             }
         });
-        add(btnCreateDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 470, -1, 40));
+        add(btnCreateDoctor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 650, -1, 40));
 
         upBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 18)); // NOI18N
         upBtn.setText("Update Teacher");
@@ -143,7 +145,7 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
                 upBtnActionPerformed(evt);
             }
         });
-        add(upBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 530, -1, 40));
+        add(upBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 650, -1, 40));
 
         dBtn4.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 18)); // NOI18N
         dBtn4.setText("Delete Teacher");
@@ -152,7 +154,7 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
                 dBtn4ActionPerformed(evt);
             }
         });
-        add(dBtn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 587, 160, 40));
+        add(dBtn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 650, 160, 40));
 
         PatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -176,13 +178,15 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
                 btnAssignDoctor1ActionPerformed(evt);
             }
         });
-        add(btnAssignDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 197, -1, 40));
+        add(btnAssignDoctor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 350, -1, 40));
 
         jLabel2.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 34)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Students");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 34)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Teachers");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
     }// </editor-fold>//GEN-END:initComponents

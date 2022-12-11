@@ -112,7 +112,7 @@ private final JPanel userProcessContainer;
         lblManageCustomers.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
         lblManageCustomers.setForeground(new java.awt.Color(255, 255, 255));
         lblManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblManageCustomers.setText("                      Manage Customers");
+        lblManageCustomers.setText("                      Manage");
         add(lblManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 29, 590, 70));
 
         btnSubmit.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 24)); // NOI18N

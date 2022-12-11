@@ -70,15 +70,17 @@ public class BillJPanel extends javax.swing.JPanel {
         totalAmounttxt = new javax.swing.JTextField();
         lblPatientName = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Microsoft JhengHei", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Bill");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 437, -1));
+        jLabel3.setText("BILLING INFORMATION");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 437, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 145, 1915, 10));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -86,17 +88,16 @@ public class BillJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Name");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 437, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 437, -1));
 
         bckBtn.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        bckBtn.setForeground(new java.awt.Color(0, 153, 204));
         bckBtn.setText(" Back");
         bckBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bckBtnActionPerformed(evt);
             }
         });
-        add(bckBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 50, 120, 40));
+        add(bckBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, 120, 40));
 
         talble.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         talble.setModel(new javax.swing.table.DefaultTableModel(
@@ -127,21 +128,25 @@ public class BillJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(talble);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 200, 550, 251));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 550, 251));
 
         textBill.setBackground(new java.awt.Color(255, 255, 255));
         textBill.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         textBill.setForeground(new java.awt.Color(255, 255, 255));
         textBill.setText("Total bill :");
-        add(textBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 470, -1, 30));
-        add(totalAmounttxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 470, 120, 30));
+        add(textBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, -1, 30));
+        add(totalAmounttxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 570, 120, 30));
 
         lblPatientName.setBackground(new java.awt.Color(255, 255, 255));
         lblPatientName.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 24)); // NOI18N
         lblPatientName.setForeground(new java.awt.Color(255, 255, 255));
         lblPatientName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        add(lblPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 347, 44));
+        add(lblPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 347, 44));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1255, 406, 481, 387));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/istockphoto-1089688182-612x612.jpg")); // NOI18N
+        jLabel4.setText("jLabel4");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 170, 580, 510));
     }// </editor-fold>//GEN-END:initComponents
 
     private void bckBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bckBtnActionPerformed
@@ -158,6 +163,7 @@ public class BillJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblPatientName;

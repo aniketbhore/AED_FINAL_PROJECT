@@ -115,14 +115,17 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         ErrorPhoneLbl1 = new javax.swing.JLabel();
         txtDOB = new com.toedter.calendar.JDateChooser();
 
+        setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddTeacher.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        lblAddTeacher.setForeground(new java.awt.Color(255, 255, 255));
         lblAddTeacher.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAddTeacher.setText("ADD A TEACHER");
         add(lblAddTeacher, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 30, 1380, -1));
 
         UserNameLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        UserNameLbl.setForeground(new java.awt.Color(255, 255, 255));
         UserNameLbl.setText("User Name");
         add(UserNameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, -1, -1));
 
@@ -134,6 +137,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         add(UsernameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 170, 30));
 
         FirstNameLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        FirstNameLbl.setForeground(new java.awt.Color(255, 255, 255));
         FirstNameLbl.setText("First Name");
         add(FirstNameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, -1, -1));
 
@@ -145,6 +149,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         add(FirstNameTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 170, 30));
 
         GenderLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        GenderLbl.setForeground(new java.awt.Color(255, 255, 255));
         GenderLbl.setText("Gender");
         add(GenderLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
 
@@ -153,6 +158,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         PhoneNoLbl.setBackground(new java.awt.Color(255, 255, 255));
         PhoneNoLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        PhoneNoLbl.setForeground(new java.awt.Color(255, 255, 255));
         PhoneNoLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         PhoneNoLbl.setText("Phone Number");
         add(PhoneNoLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, -1, -1));
@@ -171,6 +177,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         AddressLbl.setBackground(new java.awt.Color(255, 255, 255));
         AddressLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        AddressLbl.setForeground(new java.awt.Color(255, 255, 255));
         AddressLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         AddressLbl.setText("Address");
         add(AddressLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 70, 30));
@@ -189,6 +196,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         PasswordLbl.setBackground(new java.awt.Color(0, 0, 0));
         PasswordLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        PasswordLbl.setForeground(new java.awt.Color(255, 255, 255));
         PasswordLbl.setText("Password");
         add(PasswordLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 130, 90, -1));
 
@@ -206,6 +214,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         lLastNameLbl.setBackground(new java.awt.Color(0, 0, 0));
         lLastNameLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lLastNameLbl.setForeground(new java.awt.Color(255, 255, 255));
         lLastNameLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lLastNameLbl.setText("Last Name");
         add(lLastNameLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 200, 110, -1));
@@ -224,11 +233,13 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         DateOfBirthLbl.setBackground(new java.awt.Color(255, 255, 255));
         DateOfBirthLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        DateOfBirthLbl.setForeground(new java.awt.Color(255, 255, 255));
         DateOfBirthLbl.setText("Date of Birth");
         add(DateOfBirthLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 270, 100, -1));
 
         EmailLbl.setBackground(new java.awt.Color(255, 255, 255));
         EmailLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        EmailLbl.setForeground(new java.awt.Color(255, 255, 255));
         EmailLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         EmailLbl.setText("Email");
         add(EmailLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 60, -1));
@@ -244,8 +255,6 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
             }
         });
         add(EmailTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 330, 170, 30));
-
-        lblPhotoImage.setText("teacher_Image");
         add(lblPhotoImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 90, 180, 200));
 
         qualificationImageLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
@@ -258,12 +267,14 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         add(qualificationImageLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 310, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Qualification  Information ");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, -1, -1));
         add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, 1302, 10));
 
         DoctorWorkIDLbl.setBackground(new java.awt.Color(255, 255, 255));
         DoctorWorkIDLbl.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        DoctorWorkIDLbl.setForeground(new java.awt.Color(255, 255, 255));
         DoctorWorkIDLbl.setText("Teacher ID");
         add(DoctorWorkIDLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 520, -1, -1));
 
@@ -281,6 +292,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         lblExperience.setBackground(new java.awt.Color(255, 255, 255));
         lblExperience.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblExperience.setForeground(new java.awt.Color(255, 255, 255));
         lblExperience.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblExperience.setText("Experience");
         add(lblExperience, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 530, 127, -1));
@@ -299,6 +311,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
         lblSpeciality.setBackground(new java.awt.Color(255, 255, 255));
         lblSpeciality.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        lblSpeciality.setForeground(new java.awt.Color(255, 255, 255));
         lblSpeciality.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSpeciality.setText("Subject");
         add(lblSpeciality, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 590, 90, -1));
