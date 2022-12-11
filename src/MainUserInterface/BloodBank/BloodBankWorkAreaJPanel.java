@@ -5,14 +5,17 @@
 package MainUserInterface.BloodBank;
 
 import BusinessModel.BloodBank.BloodBank;
-import BusinessModel.UserAccount.User;
 import Business_Model.Ecosystem;
+import BusinessModel.Patient.PatientBills;
+import BusinessModel.Patient.Patient;
+import BusinessModel.UserAccount.User;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-
 /**
  *
- * @author JANVI
+ * @author aniketbhore
  */
 public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -24,10 +27,8 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
     User userAccount;
     BloodBank bloodBank;
     Patient billPatient;
-
-
-
-   public BloodBankWorkAreaJPanel(JPanel userProcessContainer, User account, Ecosystem system) {
+    
+    public BloodBankWorkAreaJPanel(JPanel userProcessContainer, User account, Ecosystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.ecoSystem = system;
@@ -38,39 +39,12 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         BloodRequestStatusBox.addItem("Unavailable");
         populatePatientTable();
     }
-   
-   private final JPanel userProcessContainer;
-    private final Ecosystem ecoSystem;
-    User userAccount;
-    BloodBank bloodBank;
-    Patient billPatient;
-
-
-
-//   public BloodBankWorkAreaJPanel(JPanel userProcessContainer, User account, Ecosystem system) {
-//        initComponents();
-//        this.userProcessContainer = userProcessContainer;
-//        this.ecoSystem = system;
-//        this.userAccount = account;
-//        this.billPatient = null;
-//        BloodRequestStatusBox.addItem("Select Status");
-//        BloodRequestStatusBox.addItem("Blood Delivered");
-//        BloodRequestStatusBox.addItem("Unavailable");
-//        populatePatientTable();
-//    }
-
-private void populateBillTable() {
-
-private void populateBillTable() {
+     private void populateBillTable() {
         DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
 
+        model.setRowCount(0);
 
-
-       model.setRowCount(0);
-
-
-
-       for (PatientBills b : billPatient.getpBills()) {
+        for (PatientBills b : billPatient.getpBills()) {
             
                 Object[] row = new Object[4];
                 row[0] = b.getName();
@@ -84,18 +58,12 @@ private void populateBillTable() {
         }
     }
 
-
-
-   private void populatePatientTable() {
+    private void populatePatientTable() {
         DefaultTableModel model = (DefaultTableModel) ManagePatientTable.getModel();
 
+        model.setRowCount(0);
 
-
-       model.setRowCount(0);
-
-
-
-       for (Patient patient : ecoSystem.getPatientDirectory().getPatientList()) {
+        for (Patient patient : ecoSystem.getPatientDirectory().getPatientList()) {
             if (patient.getpBloodBankStatus().equals("Requested") || patient.getpBloodBankStatus().equals("Unavailable")) {
                 Object[] row = new Object[10];
                 row[0] = patient.getpFirstName();
@@ -113,11 +81,6 @@ private void populateBillTable() {
         }
     }
 
-
-
-        
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -127,131 +90,151 @@ private void populateBillTable() {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        ManagePatientTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        ManagePatientTable = new javax.swing.JTable();
+        lblCommunity = new javax.swing.JLabel();
+        BloodRequestStatusBox = new javax.swing.JComboBox<>();
+        btnProcessRequest = new javax.swing.JButton();
+        lblPatientBill = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         BillTable = new javax.swing.JTable();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        btnProcessRequest = new javax.swing.JButton();
         btnTreatedPatientList = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnBloodBankInfo = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 153, 153));
-        setPreferredSize(new java.awt.Dimension(1400, 800));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ManagePatientTable.setBackground(new java.awt.Color(204, 0, 51));
-        ManagePatientTable.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), null));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Snell Library");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1270, 80));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1280, 10));
+
+        ManagePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManagePatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Username", "ID", "First Name", "Last Name", "Age", "Address", "Email", "Status", "Quantity"
+                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity", "obj"
             }
-        ));
-        jScrollPane1.setViewportView(ManagePatientTable);
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
 
-        BillTable.setBackground(new java.awt.Color(204, 0, 51));
-        BillTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Item Name", "Department", "Amount"
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
             }
-        ));
-        jScrollPane2.setViewportView(BillTable);
 
-        jComboBox1.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Book Issued", "Book Unavailable" }));
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane3.setViewportView(ManagePatientTable);
 
-        btnProcessRequest.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
-        btnProcessRequest.setText("Request");
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 860, 191));
+
+        lblCommunity.setBackground(new java.awt.Color(255, 255, 255));
+        lblCommunity.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblCommunity.setText("Book Request Status");
+        add(lblCommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, 30));
+
+        BloodRequestStatusBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BloodRequestStatusBoxActionPerformed(evt);
+            }
+        });
+        add(BloodRequestStatusBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 120, 162, 30));
+
+        btnProcessRequest.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnProcessRequest.setForeground(new java.awt.Color(0, 153, 204));
+        btnProcessRequest.setText("Process Request");
         btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcessRequestActionPerformed(evt);
             }
         });
+        add(btnProcessRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 200, 190, 40));
 
-        btnTreatedPatientList.setFont(new java.awt.Font("Bookman Old Style", 0, 14)); // NOI18N
-        btnTreatedPatientList.setText("Issue History");
+        lblPatientBill.setBackground(new java.awt.Color(255, 255, 255));
+        lblPatientBill.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblPatientBill.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblPatientBill.setText("BILLS");
+        add(lblPatientBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 360, 1270, 83));
+
+        BillTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        BillTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Item Name", "Organization", "Amount", "obj"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(BillTable);
+
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 456, 1270, 191));
+
+        btnTreatedPatientList.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnTreatedPatientList.setForeground(new java.awt.Color(0, 153, 204));
+        btnTreatedPatientList.setText("Show Treated Patient List");
         btnTreatedPatientList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTreatedPatientListActionPerformed(evt);
             }
         });
+        add(btnTreatedPatientList, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 700, 300, 40));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 204));
-        jLabel1.setFont(new java.awt.Font("Bodoni MT", 1, 36)); // NOI18N
-        jLabel1.setText("Snell Library");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(422, 422, 422)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(270, 270, 270)
-                        .addComponent(btnProcessRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(658, 658, 658)
-                        .addComponent(jLabel1)))
-                .addContainerGap(403, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1236, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2))
-                        .addGap(83, 83, 83))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnTreatedPatientList, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(609, 609, 609))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel1)
-                .addGap(57, 57, 57)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnProcessRequest, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1))
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addComponent(btnTreatedPatientList)
-                .addGap(49, 49, 49))
-        );
+        btnBloodBankInfo.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnBloodBankInfo.setForeground(new java.awt.Color(0, 153, 204));
+        btnBloodBankInfo.setText("Blood Bank Information");
+        btnBloodBankInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBloodBankInfoActionPerformed(evt);
+            }
+        });
+        add(btnBloodBankInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 700, 270, 40));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BloodRequestStatusBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BloodRequestStatusBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BloodRequestStatusBoxActionPerformed
 
     private void btnProcessRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessRequestActionPerformed
         // TODO add your handling code here:
+
         int selectedRowIndex = ManagePatientTable.getSelectedRow();
 
         if (selectedRowIndex < 0) {
             JOptionPane.showMessageDialog(null, "Pls select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
-        } 
-        else {
+        } else {
 
             Patient patient = (Patient) ManagePatientTable.getValueAt(selectedRowIndex, 9);
 
@@ -275,6 +258,7 @@ private void populateBillTable() {
             populateBillTable();
 
         }
+
     }//GEN-LAST:event_btnProcessRequestActionPerformed
 
     private void btnTreatedPatientListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTreatedPatientListActionPerformed
@@ -285,16 +269,27 @@ private void populateBillTable() {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnTreatedPatientListActionPerformed
 
+    private void btnBloodBankInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBloodBankInfoActionPerformed
+        // TODO add your handling code here:
+        BloodBankInfoJPanel bloodBankInfoJPanel = new BloodBankInfoJPanel(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Blood Bank Information", bloodBankInfoJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnBloodBankInfoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable BillTable;
+    private javax.swing.JComboBox<String> BloodRequestStatusBox;
     private javax.swing.JTable ManagePatientTable;
+    private javax.swing.JButton btnBloodBankInfo;
     private javax.swing.JButton btnProcessRequest;
     private javax.swing.JButton btnTreatedPatientList;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lblCommunity;
+    private javax.swing.JLabel lblPatientBill;
     // End of variables declaration//GEN-END:variables
 }

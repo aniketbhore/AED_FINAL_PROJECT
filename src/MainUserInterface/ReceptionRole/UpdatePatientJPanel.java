@@ -135,6 +135,7 @@ public class UpdatePatientJPanel extends javax.swing.JPanel {
         lblErrorUserName = new javax.swing.JLabel();
         lblErrorAccidentLocation = new javax.swing.JLabel();
         lblPhotoImage = new javax.swing.JLabel();
+        txtDOB = new com.toedter.calendar.JDateChooser();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -414,6 +415,7 @@ public class UpdatePatientJPanel extends javax.swing.JPanel {
         lblErrorAccidentLocation.setForeground(new java.awt.Color(255, 51, 51));
         add(lblErrorAccidentLocation, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 320, 130, 26));
         add(lblPhotoImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 250, 170, 160));
+        add(txtDOB, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, 210, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFirstNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFirstNameActionPerformed
@@ -636,7 +638,14 @@ public class UpdatePatientJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
 
-
+ public int CalculateAge(Date birthDate, Date currentDate) {
+        // validate inputs ...                                                                               
+        DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+        int d1 = Integer.parseInt(formatter.format(birthDate));
+        int d2 = Integer.parseInt(formatter.format(currentDate));
+        int age = (d2 - d1) / 10000;
+        return age;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> BloodGroupComboBox;
     private javax.swing.JComboBox<String> GenderComboBox;
@@ -673,6 +682,7 @@ public class UpdatePatientJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblUpdatePatient;
     private javax.swing.JTextField txtAccidentLocation;
     private javax.swing.JTextField txtAddress;
+    private com.toedter.calendar.JDateChooser txtDOB;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtHealthInsuranceID;
