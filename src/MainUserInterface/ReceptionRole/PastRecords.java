@@ -4,15 +4,15 @@
  */
 package MainUserInterface.ReceptionRole;
 import Business_Model.Ecosystem;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import MainUserInterface.Ambulance.AmbulanceWorkAreaJPanel;
-import MainUserInterface.Ambulance.ReceptionAmbulanceWorkAreaJPanel;
-import MainUserInterface.Patient.PatientBillJPanel;
+import MainUserInterface.Transport.TransportWorkAreaJPanel;
+import MainUserInterface.Transport.ReceptionTransportWorkAreaJPanel;
+import MainUserInterface.Student.StudentBillJPanel;
 
 /**
  *
@@ -36,19 +36,19 @@ private void populateNetworkTable() {
 
         model.setRowCount(0);
 
-        for (Patient patient : ecoSystem.getPatientDirectory().getPatientList()) {
+        for (Student stud : ecoSystem.getStudentDirectory().getStudentList()) {
 
             Object[] row = new Object[10];
-            row[0] = patient.getpFirstName();
-            row[1] = patient.getpLastName();
-            row[2] = patient.getpGender();
-            row[3] = patient.getpHealthInsuranceID();
-            row[4] = patient.getpAge();
-            row[5] = patient.getpEmailAddress();
-            row[6] = patient.getpInsuranceStatus();
-            row[7] = patient.getpStatus();
-            row[8] = patient;
-            if(patient.getpStatus().equals("Discharged")){
+            row[0] = stud.getsFirstName();
+            row[1] = stud.getsLastName();
+            row[2] = stud.getsGender();
+            row[3] = stud.getsFellowshipID();
+            row[4] = stud.getsAge();
+            row[5] = stud.getsEmailAddress();
+            row[6] = stud.getsFellowshipStatus();
+            row[7] = stud.getsStatus();
+            row[8] = stud;
+            if(stud.getsStatus().equals("Graduated")){
             model.addRow(row);
             }
 
@@ -139,7 +139,7 @@ private void populateNetworkTable() {
     private void btnUpdateAmbulanceRecord1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateAmbulanceRecord1ActionPerformed
         // TODO add your handling code here:
         ReceptionWorkAreaJPanel patientBillJPanel = new ReceptionWorkAreaJPanel(userProcessContainer,userAccount,ecoSystem);
-        userProcessContainer.add("Patient Bill", patientBillJPanel);
+        userProcessContainer.add("Student Bill", patientBillJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnUpdateAmbulanceRecord1ActionPerformed
@@ -153,18 +153,13 @@ private void populateNetworkTable() {
         }
         else
         {
-            Patient patient = (Patient) ManageCustomersTable.getValueAt(selectedRowIndex, 8);
-            BillJPanel patientBillJPanel = new BillJPanel(userProcessContainer, patient,userAccount,ecoSystem);
-            userProcessContainer.add("Patient Bill", patientBillJPanel);
+            Student stud = (Student) ManageCustomersTable.getValueAt(selectedRowIndex, 8);
+            BillJPanel patientBillJPanel = new BillJPanel(userProcessContainer, stud,userAccount,ecoSystem);
+            userProcessContainer.add("Student Bill", patientBillJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
             populateNetworkTable();
-            //patient.setStatus("Insurance Verification");
-            //populateNetworkTable();
-            //ManageCustomersTable doctorRequestLabTestJPanel = new ManageCustomersTable(userProcessContainer, userAccount,patient);
-            //userProcessContainer.add("Request Lab Tests", doctorRequestLabTestJPanel);
-            //CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            //layout.next(userProcessContainer);
+            
         }
     }//GEN-LAST:event_btnUpdateAmbulanceRecordActionPerformed
 

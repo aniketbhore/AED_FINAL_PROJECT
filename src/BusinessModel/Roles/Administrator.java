@@ -5,8 +5,6 @@
 package BusinessModel.Roles;
 import Business_Model.Ecosystem;
 import BusinessModel.UserAccount.User;
-import BusinessModel.UserAccount.User;
-//import MainUserInterface.SystemAdmin.AdministratorJPanel;
 import MainUserInterface.SystemAdmin.SystemAdminWorkAreaJPanel;
 import javax.swing.JPanel;
 /**

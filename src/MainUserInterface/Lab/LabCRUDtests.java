@@ -5,7 +5,7 @@
 package MainUserInterface.Lab;
 import Business_Model.Ecosystem;
 import BusinessModel.Lab.Tests;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;

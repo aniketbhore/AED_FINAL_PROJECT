@@ -4,8 +4,8 @@
  */
 package MainUserInterface.Lab;
 import Business_Model.Ecosystem;
-import BusinessModel.Patient.PatientBills;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.StudentBills;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import Business_Model.Ecosystem;
 import java.awt.CardLayout;
@@ -21,18 +21,18 @@ public class LabRequestedTests extends javax.swing.JPanel {
     /**
      * Creates new form LabRequestedTests
      */
-   Patient p;
+   Student s;
     JPanel userProcessContainer;
     User account;
     Ecosystem ecoSystem;
-    public LabRequestedTests(JPanel userProcessContainer, User account, Patient p,Ecosystem ecoSystem) {
+    public LabRequestedTests(JPanel userProcessContainer, User account, Student stud,Ecosystem ecoSystem) {
         initComponents();
         this.ecoSystem = ecoSystem;
         this.userProcessContainer = userProcessContainer;
         this.account = account;
-        this.p = p;
+        this.s = stud;
         populateBillTable();
-        jLabel3.setText("Customer Name: "+p.getpFirstName()+" "+p.getpLastName());
+        jLabel3.setText("Student Name: "+s.getsFirstName()+" "+s.getsLastName());
        
     }
         private void populateBillTable() {
@@ -40,7 +40,7 @@ public class LabRequestedTests extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (PatientBills b : p.getpBills()) {
+        for (StudentBills b : s.getsBills()) {
 
             Object[] row = new Object[6];
             row[0] = b.getName();
@@ -81,7 +81,7 @@ public class LabRequestedTests extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Patient Request");
+        jLabel1.setText("Student Request");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 510, -1));
 
         jButton2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
@@ -163,11 +163,11 @@ public class LabRequestedTests extends javax.swing.JPanel {
         }
         else{
             if (selectedRowIndex < 0) {
-                JOptionPane.showMessageDialog(null, "Pls select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Please select a row!!", "Warning", JOptionPane.WARNING_MESSAGE);
             }
             else {
-                for(PatientBills b: p.getpBills()){
-                    if(b==((PatientBills) BillTable.getValueAt(selectedRowIndex, 5))){
+                for(StudentBills b: s.getsBills()){
+                    if(b==((StudentBills) BillTable.getValueAt(selectedRowIndex, 5))){
 
                         b.setStatus("Delivered");
                         b.setResult(txtResult.getText());
@@ -179,10 +179,10 @@ public class LabRequestedTests extends javax.swing.JPanel {
 
                 }
                 if(BillTable.getRowCount()==0){
-                    p.setpLabStatus("Delivered");
+                    s.setsLabStatus("Delivered");
 
                     LabWorkAreaJPanel doctorRequestLabTestJPanel = new LabWorkAreaJPanel(userProcessContainer, account,ecoSystem);
-                    userProcessContainer.add("Request Lab Tests", doctorRequestLabTestJPanel);
+                    userProcessContainer.add("Request Lab Slots", doctorRequestLabTestJPanel);
                     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                     layout.next(userProcessContainer);
                 }
