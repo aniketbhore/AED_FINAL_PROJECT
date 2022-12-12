@@ -150,7 +150,7 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
 
         btnSubmit.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnSubmit.setForeground(new java.awt.Color(204, 0, 0));
-        btnSubmit.setText("Add Medicine");
+        btnSubmit.setText("Add Item ");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -160,7 +160,7 @@ public class PharmacyCRUDJpanel extends javax.swing.JPanel {
 
         conBtn.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         conBtn.setForeground(new java.awt.Color(204, 0, 0));
-        conBtn.setText("Save Update");
+        conBtn.setText("Save");
         conBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 conBtnActionPerformed(evt);

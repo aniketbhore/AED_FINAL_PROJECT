@@ -104,7 +104,7 @@ public class PharmacyPastRequest extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Patient Request");
+        jLabel1.setText("Student Request");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-250, 60, 1414, 40));
 
         BillTable.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
