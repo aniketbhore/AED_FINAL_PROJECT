@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package BusinessModel.Lab;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import java.util.ArrayList;
 /**
  *
@@ -13,15 +13,15 @@ public class Lab {
     private String lab;
     private String email;
     private ArrayList<Tests> testList;
-    private ArrayList<Patient> labRecordsList;
+    private ArrayList<Student> labRecordsList;
 
     public Lab() {
         testList = new ArrayList<>();
         labRecordsList = new ArrayList<>();
     }
-    public void AddTreatedPatientList(Patient patient)
+    public void AddTreatedPatientList(Student patient)
     {
-      /*  for(Patient p:labRecordsList){
+      /*  for(Student p:labRecordsList){
         if(!labRecordsList.contains(patient)){
         labRecordsList.add(patient);
         }
@@ -55,11 +55,11 @@ public class Lab {
         this.testList = testList;
     }
 
-    public ArrayList<Patient> getLabRecordsList() {
+    public ArrayList<Student> getLabRecordsList() {
         return labRecordsList;
     }
 
-    public void setLabRecordsList(ArrayList<Patient> labRecordsList) {
+    public void setLabRecordsList(ArrayList<Student> labRecordsList) {
         this.labRecordsList = labRecordsList;
     }
         public Tests createTest(Tests t) {

@@ -5,7 +5,7 @@
 package MainUserInterface.Lab;
 import Business_Model.Ecosystem;
 import BusinessModel.Lab.Tests;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import Business_Model.Ecosystem;
 import java.awt.CardLayout;
@@ -41,16 +41,16 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         private void populatePatientTable1() {
         DefaultTableModel model = (DefaultTableModel) managePatientTable1.getModel();
         model.setRowCount(0);
-        for (Patient patient : this.ecosystem.getLab().getLabRecordsList()) {
+        for (Student s : this.ecosystem.getLab().getLabRecordsList()) {
             Object[] row = new Object[7];
-            row[0] = patient.getpFirstName();
-            row[1] = patient.getpLastName();
-            row[2] = patient.getpHealthInsuranceID();
-            row[3] = patient.getpAge();
-            row[4] = patient.getpEmailAddress();
-            row[5] = patient.getpLabStatus();
-            row[6] = patient;
-            if(!patient.getpLabStatus().equals("Delivered")){
+            row[0] = s.getsFirstName();
+            row[1] = s.getsLastName();
+            row[2] = s.getsFellowshipID();
+            row[3] = s.getsAge();
+            row[4] = s.getsEmailAddress();
+            row[5] = s.getsLabStatus();
+            row[6] = s;
+            if(!s.getsLabStatus().equals("Delivered")){
             model.addRow(row);}
 
         }
@@ -58,16 +58,16 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
     private void populatePatientTable() {
             DefaultTableModel model = (DefaultTableModel) managePatientTable2.getModel();
             model.setRowCount(0);
-            for (Patient patient : this.ecosystem.getLab().getLabRecordsList()) {
+            for (Student s : this.ecosystem.getLab().getLabRecordsList()) {
                 Object[] row = new Object[7];
-                row[0] = patient.getpFirstName();
-                row[1] = patient.getpLastName();
-                row[2] = patient.getpHealthInsuranceID();
-                row[3] = patient.getpAge();
-                row[4] = patient.getpEmailAddress();
-                row[5] = patient.getpLabStatus();
-                row[6] = patient;
-                if(patient.getpLabStatus().equals("Delivered")){
+                row[0] = s.getsFirstName();
+                row[1] = s.getsLastName();
+                row[2] = s.getsFellowshipID();
+                row[3] = s.getsAge();
+                row[4] = s.getsEmailAddress();
+                row[5] = s.getsLabStatus();
+                row[6] = s;
+                if(s.getsLabStatus().equals("Delivered")){
                 model.addRow(row);}
             }
     }
@@ -213,12 +213,13 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-            Patient patient = (Patient) managePatientTable1.getValueAt(selectedRowIndex, 6);
+            Student patient = (Student) managePatientTable1.getValueAt(selectedRowIndex, 6);
             LabRequestedTests doctorRequestLabTestJPanel = new LabRequestedTests(userProcessContainer, userAccount,patient,ecosystem);
-            userProcessContainer.add("Request Lab Tests", doctorRequestLabTestJPanel);
+            userProcessContainer.add("Request Lab Slots", doctorRequestLabTestJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -239,9 +240,9 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-            Patient patient = (Patient) managePatientTable2.getValueAt(selectedRowIndex, 6);
+            Student patient = (Student) managePatientTable2.getValueAt(selectedRowIndex, 6);
             LabPastRequestedTests doctorRequestLabTestJPanel = new LabPastRequestedTests(userProcessContainer, userAccount,patient,ecosystem);
-            userProcessContainer.add("Past Lab Tests", doctorRequestLabTestJPanel);
+            userProcessContainer.add("Past Lab Slots", doctorRequestLabTestJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }

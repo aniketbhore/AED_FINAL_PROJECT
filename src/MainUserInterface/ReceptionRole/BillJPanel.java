@@ -5,9 +5,8 @@
 package MainUserInterface.ReceptionRole;
 
 import Business_Model.Ecosystem;
-import MainUserInterface.Patient.*;
-import BusinessModel.Patient.PatientBills;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.StudentBills;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -23,16 +22,16 @@ public class BillJPanel extends javax.swing.JPanel {
      * Creates new form BillJPanel
      */
     JPanel userProcessContainer;
-    Patient patient;
+    Student stud;
     User account;
     Ecosystem system;
-    public BillJPanel(JPanel userProcessContainer, Patient p,User account,Ecosystem system) {
+    public BillJPanel(JPanel userProcessContainer, Student p,User account,Ecosystem system) {
         initComponents();
         this.account = account;
         this.system = system;
         this.userProcessContainer = userProcessContainer;
-        this.patient = p;
-        lblPatientName.setText(patient.getpFirstName() + " " + patient.getpLastName());
+        this.stud = p;
+        lblPatientName.setText(stud.getsFirstName() + " " + stud.getsLastName());
         populateBillTable();
     }
 
@@ -40,7 +39,7 @@ public class BillJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) talble.getModel();
         model.setRowCount(0);
         int totalAmount = 0;
-        for (PatientBills b : patient.getpBills()) {
+        for (StudentBills b : stud.getsBills()) {
             Object[] row = new Object[7];
             row[0] = b.getName();
             row[1] = b.getOrgType();
@@ -152,7 +151,7 @@ public class BillJPanel extends javax.swing.JPanel {
     private void bckBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bckBtnActionPerformed
         // TODO add your handling code here:
         ReceptionWorkAreaJPanel patientBillJPanel = new ReceptionWorkAreaJPanel(userProcessContainer,account,system);
-        userProcessContainer.add("Patient Bill", patientBillJPanel);
+        userProcessContainer.add("Student Bill", patientBillJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_bckBtnActionPerformed

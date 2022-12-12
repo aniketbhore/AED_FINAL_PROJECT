@@ -6,7 +6,7 @@ package MainUserInterface.SystemAdmin;
 import Business_Model.Ecosystem;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-import MainUserInterface.DoctorAdministration.CreateDoctorJPanel;
+import MainUserInterface.TeacherAdministration.CreateTeacherJPanel;
 /**
  *
  * @author aniketbhore
@@ -92,7 +92,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseActionPerformed
-        CreateDoctorJPanel doctorAdministratorWorkAreaJPanel = new CreateDoctorJPanel(userProcessContainer, null, ecosystem);
+        CreateTeacherJPanel doctorAdministratorWorkAreaJPanel = new CreateTeacherJPanel(userProcessContainer, null, ecosystem);
         userProcessContainer.add("Manage Doctors", doctorAdministratorWorkAreaJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);

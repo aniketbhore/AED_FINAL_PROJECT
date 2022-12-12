@@ -6,14 +6,14 @@ package MainUserInterface;
 
 import Business_Model.Ecosystem;
 import BusinessModel.DB4OUtil.DB4OUtil;
-import BusinessModel.Pharmacy.Pharmacy;
-import BusinessModel.Roles.AmbulanceDriver;
-import BusinessModel.Roles.BloodBank;
-import BusinessModel.Roles.DoctorsAdministrator;
-import BusinessModel.Roles.InsuranceManager;
+import BusinessModel.Inventory.Inventory;
+import BusinessModel.Roles.BusDriver;
+import BusinessModel.Roles.BookStore;
+import BusinessModel.Roles.TeachersAdministrator;
+import BusinessModel.Roles.FellowshipManager;
 import BusinessModel.Roles.Lab;
-import BusinessModel.Roles.Patient_role;
-import BusinessModel.Roles.Pharmacist;
+import BusinessModel.Roles.Student_role;
+import BusinessModel.Roles.InventoryManager;
 import BusinessModel.Roles.Police;
 import BusinessModel.Roles.Reception;
 import BusinessModel.UserAccount.User;
@@ -36,14 +36,14 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         system = dB4OUtil.retrieveSystem();
         this.setSize(1680, 1050);
-        system.getUserAccountDirectory().createUser("bloodbank", "bloodbank", null, new BloodBank());
-        system.getUserAccountDirectory().createUser("pharmacy", "pharmacy", null, new Pharmacist());
-        system.getUserAccountDirectory().createUser("insurance", "insurance", null, new InsuranceManager());
-        system.getUserAccountDirectory().createUser("ambulance", "ambulance", null, new AmbulanceDriver());
+        system.getUserAccountDirectory().createUser("bloodbank", "bloodbank", null, new BookStore());
+        system.getUserAccountDirectory().createUser("pharmacy", "pharmacy", null, new InventoryManager());
+        system.getUserAccountDirectory().createUser("insurance", "insurance", null, new FellowshipManager());
+        system.getUserAccountDirectory().createUser("ambulance", "ambulance", null, new BusDriver());
         system.getUserAccountDirectory().createUser("lab", "lab", null, new Lab());
         system.getUserAccountDirectory().createUser("hos", "hos", null, new Reception());
         system.getUserAccountDirectory().createUser("cop", "cop", null, new Police());
-        system.getUserAccountDirectory().createUser("doctor", "doctor", null, new DoctorsAdministrator());
+        system.getUserAccountDirectory().createUser("doctor", "doctor", null, new TeachersAdministrator());
     }
 
     /**

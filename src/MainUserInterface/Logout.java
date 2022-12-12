@@ -8,8 +8,8 @@ package MainUserInterface;
 import MainUserInterface.Police.PersonInfo;
 
 import Business_Model.Ecosystem;
-import BusinessModel.Patient.PatientBills;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.StudentBills;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import java.text.SimpleDateFormat;
