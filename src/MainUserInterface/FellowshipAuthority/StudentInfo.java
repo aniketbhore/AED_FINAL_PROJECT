@@ -324,7 +324,7 @@ public class StudentInfo extends javax.swing.JPanel {
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
         //patient.setInsuranceStatus("Approved");
-        InsuranceWorkAreaJPanel bill = new InsuranceWorkAreaJPanel(userProcessContainer, user, ecoSystem);
+        FellowshipWorkAreaJPanel bill = new FellowshipWorkAreaJPanel(userProcessContainer, user, ecoSystem);
         userProcessContainer.add("Fellowship main", bill);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
@@ -361,7 +361,7 @@ public class StudentInfo extends javax.swing.JPanel {
             //ecoSystem.sendEmail("hospital.aed@zohomail.com", "Approval Confirmation for "+stud.getpFirstName(), "Student Insurance Approved Name: "+stud.getpFirstName()+" "+stud.getpLastName(), "insurance.aed@zohomail.com", "Bangbang@8899");
         }
         catch(Exception e){}
-        InsuranceWorkAreaJPanel bill = new InsuranceWorkAreaJPanel(userProcessContainer, user, ecoSystem);
+        FellowshipWorkAreaJPanel bill = new FellowshipWorkAreaJPanel(userProcessContainer, user, ecoSystem);
         userProcessContainer.add("Insurance main", bill);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
@@ -383,7 +383,7 @@ public class StudentInfo extends javax.swing.JPanel {
     private void rjctBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rjctBtnActionPerformed
         // TODO add your handling code here:
         stud.setsFellowshipStatus("Rejected");
-        InsuranceWorkAreaJPanel bill = new InsuranceWorkAreaJPanel(userProcessContainer, user, ecoSystem);
+        FellowshipWorkAreaJPanel bill = new FellowshipWorkAreaJPanel(userProcessContainer, user, ecoSystem);
         userProcessContainer.add("Fellowship main", bill);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
