@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author sahil
+ * @author aniketbhore
  */
 public class Logout extends javax.swing.JPanel {
 

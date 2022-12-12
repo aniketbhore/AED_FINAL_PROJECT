@@ -19,7 +19,7 @@ import javax.mail.internet.MimeMessage;
 
 /**
  *
- * @author siddh
+ * @author aniketbhore
  */
 public class SendMail {
     
