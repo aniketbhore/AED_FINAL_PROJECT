@@ -116,7 +116,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Pharmacy");
+        jLabel1.setText("Inventory");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1211, -1));
 
         jSeparator1.setBackground(new java.awt.Color(255, 129, 190));
@@ -131,7 +131,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First", "Last", "PharmaStatus", "HealthId", "Age", "Address", "Email"
+                "First", "Last", "Status", "Id", "Age", "Address", "Email"
             }
         ) {
             Class[] types = new Class [] {
@@ -198,7 +198,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
         jLabel5.setBackground(new java.awt.Color(255, 204, 204));
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 1240));
 
-        jButton3.setBackground(new java.awt.Color(15, 85, 177));
+        jButton3.setBackground(new java.awt.Color(204, 0, 51));
         jButton3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("View Request");
@@ -229,7 +229,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First", "Last", "PharmaStatus", "HealthId", "Age", "Address", "Email"
+                "First", "Last", "Status", "Id", "Age", "Address", "Email"
             }
         ) {
             Class[] types = new Class [] {

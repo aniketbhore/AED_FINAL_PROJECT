@@ -131,7 +131,7 @@ private void populateNetworkTable() {
         lblManageCustomers.setText("                      Manage Students");
         add(lblManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 13, 590, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/Neu_logo.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainUserInterface/Images/Neu_logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 60, 230, -1));
     }// </editor-fold>//GEN-END:initComponents

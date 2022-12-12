@@ -144,7 +144,7 @@ public class BillJPanel extends javax.swing.JPanel {
         add(lblPatientName, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 347, 44));
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1255, 406, 481, 387));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/istockphoto-1089688182-612x612.jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainUserInterface/Images/istockphoto-1089688182-612x612.jpg"))); // NOI18N
         jLabel4.setText("jLabel4");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 170, 580, 510));
     }// </editor-fold>//GEN-END:initComponents

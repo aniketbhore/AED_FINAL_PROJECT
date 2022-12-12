@@ -93,8 +93,8 @@ public class PersonInfo extends javax.swing.JPanel {
 
         lblPatientHealthInsuranceID.setBackground(new java.awt.Color(255, 255, 255));
         lblPatientHealthInsuranceID.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPatientHealthInsuranceID.setText("FellowshipID");
-        add(lblPatientHealthInsuranceID, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 170, -1));
+        lblPatientHealthInsuranceID.setText("ID");
+        add(lblPatientHealthInsuranceID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 380, 30, -1));
 
         txtHealthInsuranceID.setEditable(false);
         txtHealthInsuranceID.addActionListener(new java.awt.event.ActionListener() {

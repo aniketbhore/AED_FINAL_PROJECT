@@ -95,7 +95,7 @@ public class UpdateDoctorJPanel extends javax.swing.JPanel {
         lblRestaurantInfo.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         lblRestaurantInfo.setForeground(new java.awt.Color(255, 255, 255));
         lblRestaurantInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblRestaurantInfo.setText("Update Doctor");
+        lblRestaurantInfo.setText("Update");
         jPanel1.add(lblRestaurantInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 22, 1154, -1));
         jPanel1.add(txtFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 170, 33));
 
