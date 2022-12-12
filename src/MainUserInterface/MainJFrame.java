@@ -36,14 +36,14 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         system = dB4OUtil.retrieveSystem();
         this.setSize(1680, 1050);
-        system.getUserAccountDirectory().createUser("bloodbank", "bloodbank", null, new BookStore());
-        system.getUserAccountDirectory().createUser("pharmacy", "pharmacy", null, new InventoryManager());
-        system.getUserAccountDirectory().createUser("insurance", "insurance", null, new FellowshipManager());
-        system.getUserAccountDirectory().createUser("ambulance", "ambulance", null, new BusDriver());
+        system.getUserAccountDirectory().createUser("bookstore", "bookstore", null, new BookStore());
+        system.getUserAccountDirectory().createUser("inventory", "inventory", null, new InventoryManager());
+        system.getUserAccountDirectory().createUser("fellowship", "fellowship", null, new FellowshipManager());
+        system.getUserAccountDirectory().createUser("transport", "transport", null, new BusDriver());
         system.getUserAccountDirectory().createUser("lab", "lab", null, new Lab());
-        system.getUserAccountDirectory().createUser("hos", "hos", null, new Reception());
+        system.getUserAccountDirectory().createUser("sch", "sch", null, new Reception());
         system.getUserAccountDirectory().createUser("cop", "cop", null, new Police());
-        system.getUserAccountDirectory().createUser("doctor", "doctor", null, new TeachersAdministrator());
+        system.getUserAccountDirectory().createUser("teacher", "teacher", null, new TeachersAdministrator());
     }
 
     /**

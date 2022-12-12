@@ -37,7 +37,7 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
         BloodRequestStatusBox.addItem("Select Status");
         BloodRequestStatusBox.addItem("Book Delivered");
         BloodRequestStatusBox.addItem("Unavailable");
-        populatePatientTable();
+        populateStudentTable();
     }
      private void populateBillTable() {
         DefaultTableModel model = (DefaultTableModel) BillTable.getModel();
@@ -58,7 +58,7 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
         }
     }
 
-    private void populatePatientTable() {
+    private void populateStudentTable() {
         DefaultTableModel model = (DefaultTableModel) ManagePatientTable.getModel();
 
         model.setRowCount(0);
@@ -117,20 +117,20 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
         ManagePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManagePatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity"
+                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity", "ob"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -177,20 +177,20 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
         BillTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         BillTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Item Name", "Organization", "Amount"
+                "Item Name", "Organization", "Amount", "ob"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -206,7 +206,7 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 1160, 191));
 
         btnTreatedPatientList.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnTreatedPatientList.setText("Show Treated Patient List");
+        btnTreatedPatientList.setText("Show List");
         btnTreatedPatientList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTreatedPatientListActionPerformed(evt);
@@ -215,7 +215,7 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
         add(btnTreatedPatientList, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 800, 300, 40));
 
         btnBloodBankInfo.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnBloodBankInfo.setText("Blood Bank Information");
+        btnBloodBankInfo.setText("Information");
         btnBloodBankInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBloodBankInfoActionPerformed(evt);
@@ -247,7 +247,7 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
                         if (s.getsBookStoreStatus().equals("Book Delivered")) {
                             for (int book = 0; book < Integer.parseInt(billStudent.getsBooksQuantity()); book++) {
                                 ecoSystem.getStudentDirectory().AddBill(billStudent, "Book Charges", "Book Store", "");
-                                ecoSystem.getBookStore().AddTreatedPatientList(billStudent);
+                                ecoSystem.getBookStore().AddPastStudentsList(billStudent);
                             }
                         }
                         break;
@@ -255,7 +255,7 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
                 }
             }
 
-            populatePatientTable();
+            populateStudentTable();
             populateBillTable();
 
         }
@@ -264,16 +264,16 @@ public class BookStoreWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnTreatedPatientListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTreatedPatientListActionPerformed
         // TODO add your handling code here:
-        PastStudentsJPanel treatedPatientJPanel = new PastStudentsJPanel(userProcessContainer,userAccount,ecoSystem);
-        userProcessContainer.add("Display Enrolled Students", treatedPatientJPanel);
+        PastStudentsJPanel pastStudentsJPanel = new PastStudentsJPanel(userProcessContainer,userAccount,ecoSystem);
+        userProcessContainer.add("Display Enrolled Students", pastStudentsJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnTreatedPatientListActionPerformed
 
     private void btnBloodBankInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBloodBankInfoActionPerformed
         // TODO add your handling code here:
-        BookStoreInfoJPanel bloodBankInfoJPanel = new BookStoreInfoJPanel(userProcessContainer, userAccount, ecoSystem);
-        userProcessContainer.add("Book Store Information", bloodBankInfoJPanel);
+        BookStoreInfoJPanel BookStoreInfoJPanel = new BookStoreInfoJPanel(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Book Store Information", BookStoreInfoJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnBloodBankInfoActionPerformed

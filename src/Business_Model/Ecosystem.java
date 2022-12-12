@@ -60,15 +60,17 @@ public class Ecosystem extends Organisation{
     }
 
     public StudentDirectory getStudentDirectory() {
-        return studentDirectory;
+        return studentDirectory = (studentDirectory == null) ? new StudentDirectory() : studentDirectory;
     }
 
-    public void setStudentDirectory(StudentDirectory studentDirectory) {
+    public void setPatientDirectory(StudentDirectory studentDirectory) {
         this.studentDirectory = studentDirectory;
     }
 
+    
+
     public TeacherDirectory getTeacherDirectory() {
-        return teacherDirectory;
+        return teacherDirectory = (teacherDirectory == null) ? new TeacherDirectory() : teacherDirectory;
     }
 
     public void setTeacherDirectory(TeacherDirectory teacherDirectory) {
@@ -76,7 +78,7 @@ public class Ecosystem extends Organisation{
     }
 
     public TransportDirectory getTransportDirectory() {
-        return transportDirectory;
+        return transportDirectory = (transportDirectory == null) ? new TransportDirectory() : transportDirectory;
     }
 
     public void setTransportDirectory(TransportDirectory transportDirectory) {
@@ -85,7 +87,7 @@ public class Ecosystem extends Organisation{
 
 
     public BookStore getBookStore() {
-        return bookStore;
+        return bookStore = (bookStore == null) ? new BookStore() : bookStore;
     }
 
     public void setBookStore(BookStore bookStore) {
@@ -93,7 +95,7 @@ public class Ecosystem extends Organisation{
     }
 
     public Inventory getInventory() {
-        return inventory;
+        return inventory = (inventory == null)? new Inventory() : inventory;
     }
 
     public void setInventory(Inventory inventory) {
@@ -109,7 +111,7 @@ public class Ecosystem extends Organisation{
     }
 
     public FellowshipDirectory getFellowshipDirectory() {
-        return fellowshipDirectory;
+        return fellowshipDirectory = (fellowshipDirectory == null)? new FellowshipDirectory() : fellowshipDirectory;
     }
 
     public void setFellowshipDirectory(FellowshipDirectory fellowshipDirectory) {

@@ -80,7 +80,7 @@ public class ReceptionTransportWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("REGISTER AN EMERGENCY");
+        jLabel1.setText("Register For Trasport Service");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 1432, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1432, 10));
 

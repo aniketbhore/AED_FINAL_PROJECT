@@ -76,6 +76,7 @@ public class BookStoreInfoJPanel extends javax.swing.JPanel {
         lblName.setText("Name");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, 30));
 
+        txtName.setText("Northeastern University");
         txtName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameActionPerformed(evt);
@@ -89,6 +90,7 @@ public class BookStoreInfoJPanel extends javax.swing.JPanel {
         lblAddress.setText("Address");
         add(lblAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, 30));
 
+        txtAddress.setText("360 Huntington Ave");
         txtAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAddressActionPerformed(evt);
@@ -102,6 +104,7 @@ public class BookStoreInfoJPanel extends javax.swing.JPanel {
         lblPhoneNumber.setText("Phone Number");
         add(lblPhoneNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, 30));
 
+        txtPhoneNumber.setText("1234567890");
         txtPhoneNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPhoneNumberActionPerformed(evt);
@@ -115,6 +118,7 @@ public class BookStoreInfoJPanel extends javax.swing.JPanel {
         lblEmail.setText("Email");
         add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, -1, 30));
 
+        txtEmail.setText("gradadmissions@northeastern.edu");
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);

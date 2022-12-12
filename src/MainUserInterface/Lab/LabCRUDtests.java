@@ -93,25 +93,25 @@ public class LabCRUDtests extends javax.swing.JPanel {
         lblName2.setBackground(new java.awt.Color(0, 0, 0));
         lblName2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
         lblName2.setForeground(new java.awt.Color(255, 255, 255));
-        lblName2.setText("Price");
+        lblName2.setText("Total");
         add(lblName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, -1, 30));
 
         lblName1.setBackground(new java.awt.Color(0, 0, 0));
         lblName1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
         lblName1.setForeground(new java.awt.Color(255, 255, 255));
-        lblName1.setText("Usage");
+        lblName1.setText("Topic");
         add(lblName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, 30));
 
         lblName.setBackground(new java.awt.Color(0, 0, 0));
         lblName.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
         lblName.setForeground(new java.awt.Color(255, 255, 255));
-        lblName.setText("Test Name");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, 30));
+        lblName.setText("Name");
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Tests");
+        jLabel1.setText("SLOTS");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 460, 44));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1390, 10));
 
@@ -125,7 +125,7 @@ public class LabCRUDtests extends javax.swing.JPanel {
         add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, 110, 40));
 
         btnSubmit.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnSubmit.setText("Add Test");
+        btnSubmit.setText("Add");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
@@ -170,7 +170,7 @@ public class LabCRUDtests extends javax.swing.JPanel {
                 {null, null, null}
             },
             new String [] {
-                "Test Name", "Test Usage", "Price"
+                "Name", "Usage", "Total"
             }
         ) {
             Class[] types = new Class [] {

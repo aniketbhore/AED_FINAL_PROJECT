@@ -135,7 +135,7 @@ public class TeacherRequestItemJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Meal Name", "Meal Specifics", "Quantity", "Price"
+                "Name", "Specifics", "Quantity", "Price"
             }
         ) {
             Class[] types = new Class [] {
@@ -184,7 +184,7 @@ public class TeacherRequestItemJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Meal Name", "Meal Specifics", "Quantity", "Price"
+                "Name", "Specifics", "Quantity", "Price"
             }
         ) {
             Class[] types = new Class [] {

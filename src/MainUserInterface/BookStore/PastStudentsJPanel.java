@@ -81,20 +81,20 @@ public class PastStudentsJPanel extends javax.swing.JPanel {
         ManagePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManagePatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "User Name", "Id", "First", "Last", "Age", "Address", "Email", "Status"
+                "User Name", "Id", "First", "Last", "Age", "Address", "Email", "Status", "ob"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -117,13 +117,13 @@ public class PastStudentsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 700, 240, 40));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, 240, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
-        BookStoreWorkAreaJPanel bloodBankWorkAreaJPanel = new BookStoreWorkAreaJPanel(userProcessContainer, userAccount, ecoSystem);
-        userProcessContainer.add("Display Treated Patient", bloodBankWorkAreaJPanel);
+        BookStoreWorkAreaJPanel bookStoreWorkAreaJPanel = new BookStoreWorkAreaJPanel(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Display Past Students", bookStoreWorkAreaJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed

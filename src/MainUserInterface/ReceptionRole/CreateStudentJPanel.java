@@ -7,7 +7,7 @@ import Business_Model.Ecosystem;
 import BusinessModel.Student.Student;
 import BusinessModel.Roles.Student_role;
 import BusinessModel.UserAccount.User;
-//import BusinessUtil.Mail.SendMail;
+import BusinessUtil.Mail.SendMail;
 import java.awt.CardLayout;
 import java.awt.Image;
 import java.io.File;
@@ -230,7 +230,7 @@ public class CreateStudentJPanel extends javax.swing.JPanel {
         jRadioInsurance.setBackground(new java.awt.Color(255, 255, 255));
         jRadioInsurance.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
         jRadioInsurance.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioInsurance.setText("Insurance ");
+        jRadioInsurance.setText("Fellowship");
         jRadioInsurance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioInsuranceActionPerformed(evt);
@@ -640,12 +640,12 @@ public class CreateStudentJPanel extends javax.swing.JPanel {
 
             ecoSystem.getUserAccountDirectory().createUser(txtUserName.getText(), txtPassword.getText(), null, new Student_role());
             ecoSystem.getStudentDirectory().createStudent(stud);
-//            SendMail.sendMail(patient.getpEmailAddress(), "Hello "+patient.getpFirstName()+", your account has been successfully created in Hospital EcoSystem Management!");
-//            for (Student p : ecoSystem.getPatientDirectory().getPatientList()) {
-//                if (p.getpUserName().equals(txtUserName.getText())) {
-//                    ecoSystem.getPatientDirectory().AddBill(p, "Bed Charge", "Hospital", "Ammount");
-//                }
-//            }
+            SendMail.sendMail(stud.getsEmailAddress(), "Hello "+stud.getsFirstName()+", your account has been successfully created!");
+            for (Student p : ecoSystem.getStudentDirectory().getStudentList()) {
+                if (p.getsUserName().equals(txtUserName.getText())) {
+                    ecoSystem.getStudentDirectory().AddBill(p, "Seat Charge", "School", "Ammount");
+                }
+            }
 
             JOptionPane.showMessageDialog(null, "Student Created");
 

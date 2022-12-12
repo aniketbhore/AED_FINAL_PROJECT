@@ -108,17 +108,17 @@ public class TeacherAdminWorkArea extends javax.swing.JPanel {
 
         DoctorTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "TeacherID", "Experience", "Age", "Gender", "Email"
+                "First Name", "Last Name", "TeacherID", "Experience", "Age", "Gender", "Email", "obj"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, true, true
+                false, false, false, false, false, true, true, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -158,15 +158,23 @@ public class TeacherAdminWorkArea extends javax.swing.JPanel {
 
         PatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Book Category", "Blood Type", "Title 5", "Title 6", "Title 7"
+                "First Name", "Last Name", "Book Category", "Blood Type", "Age", "Gender", "Email", "obj"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(PatientTable);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 820, 170));

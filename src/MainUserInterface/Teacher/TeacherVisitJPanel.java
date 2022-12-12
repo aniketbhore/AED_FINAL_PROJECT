@@ -121,7 +121,7 @@ public class TeacherVisitJPanel extends javax.swing.JPanel {
                 btnRequestLabTestsActionPerformed(evt);
             }
         });
-        add(btnRequestLabTests, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 200, 60));
+        add(btnRequestLabTests, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 200, 60));
 
         btnRequestBlood.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestBlood.setText("Request Book");
@@ -130,16 +130,16 @@ public class TeacherVisitJPanel extends javax.swing.JPanel {
                 btnRequestBloodActionPerformed(evt);
             }
         });
-        add(btnRequestBlood, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 170, 60));
+        add(btnRequestBlood, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 170, 60));
 
         btnRequestMedicine.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnRequestMedicine.setText("Request Meal Plan");
+        btnRequestMedicine.setText("Request Inventory");
         btnRequestMedicine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestMedicineActionPerformed(evt);
             }
         });
-        add(btnRequestMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 220, 60));
+        add(btnRequestMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 220, 60));
 
         btnRequestMedicine1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestMedicine1.setText("Graduate");
@@ -148,7 +148,7 @@ public class TeacherVisitJPanel extends javax.swing.JPanel {
                 btnRequestMedicine1ActionPerformed(evt);
             }
         });
-        add(btnRequestMedicine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 360, 210, 60));
+        add(btnRequestMedicine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 360, 210, 60));
 
         btnRequestMedicine2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestMedicine2.setText("Term Complete");
@@ -157,7 +157,7 @@ public class TeacherVisitJPanel extends javax.swing.JPanel {
                 btnRequestMedicine2ActionPerformed(evt);
             }
         });
-        add(btnRequestMedicine2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 360, 200, 60));
+        add(btnRequestMedicine2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 360, 200, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestLabTestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestLabTestsActionPerformed
@@ -189,18 +189,18 @@ public class TeacherVisitJPanel extends javax.swing.JPanel {
 
     private void btnRequestMedicine1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestMedicine1ActionPerformed
         // TODO add your handling code here:
-        stud.setsStatus("Ready to Passout");
-        TeacherWorkAreaJPanel teacher = new TeacherWorkAreaJPanel(userProcessContainer,userAccount,ecoSystem);
-        userProcessContainer.add("Request Book", teacher);
+        stud.setsStatus("Ready to Graduate");
+        TeacherWorkAreaJPanel t = new TeacherWorkAreaJPanel(userProcessContainer,userAccount,ecoSystem);
+        userProcessContainer.add("Request Book", t);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnRequestMedicine1ActionPerformed
 
     private void btnRequestMedicine2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestMedicine2ActionPerformed
         // TODO add your handling code here:
-        stud.setsStatus("Active Enrolment");
-        TeacherWorkAreaJPanel teacher = new TeacherWorkAreaJPanel(userProcessContainer,userAccount,ecoSystem);
-        userProcessContainer.add("Request Book", teacher);
+        stud.setsStatus("Enrolled");
+        TeacherWorkAreaJPanel t = new TeacherWorkAreaJPanel(userProcessContainer,userAccount,ecoSystem);
+        userProcessContainer.add("Request Book", t);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnRequestMedicine2ActionPerformed

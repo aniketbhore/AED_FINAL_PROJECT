@@ -76,7 +76,7 @@ public class FellowshipWorkAreaJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("FELLOWSHIP DEPARTMENT");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-130, 40, 1380, -1));
@@ -86,20 +86,20 @@ public class FellowshipWorkAreaJPanel extends javax.swing.JPanel {
         PatientTbl.setFont(new java.awt.Font("Trebuchet MS", 1, 12));
         PatientTbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Last", "Bill Total", "FellowshipId", "Email", "Police Verification", "Fellowship Status"
+                "Name", "Last", "Bill Total", "FellowshipId", "Email", "Police Verification", "Fellowship Status", "ob"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true, false
+                false, false, false, false, true, true, false, false
             };
 
             public Class getColumnClass(int columnIndex) {

@@ -4,8 +4,8 @@
  */
 package BusinessModel.DB4OUtil;
 
-import Business_Model.Ecosystem;
 import Business_Model.SystemConfiguration;
+import Business_Model.Ecosystem;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;
 import com.db4o.ObjectSet;
@@ -13,11 +13,8 @@ import com.db4o.config.EmbeddedConfiguration;
 import com.db4o.ta.TransparentPersistenceSupport;
 import java.nio.file.Paths;
 
-/**
- *
- * @author aniketbhore
- */
 public class DB4OUtil {
+
     private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();
 
     private static DB4OUtil dB4OUtil;

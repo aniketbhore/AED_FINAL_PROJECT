@@ -40,8 +40,10 @@ public class Student {
 
     public Student(String sUserName) {
         this.sUserName = sUserName;
+        sBills = new ArrayList<>();
     }
-
+    
+    
     public String getsUserName() {
         return sUserName;
     }
@@ -94,8 +96,8 @@ public class Student {
         return sdob;
     }
 
-    public void setsdob(Date pdob) {
-        this.sdob = pdob;
+    public void setsdob(Date sdob) {
+        this.sdob = sdob;
     }
 
     public String getsAddress() {
@@ -233,6 +235,7 @@ public class Student {
     public void setsBills(ArrayList<StudentBills> sBills) {
         this.sBills = sBills;
     }
+    
     public void addbill(StudentBills bill){
         sBills.add(bill);
     } 
@@ -243,5 +246,6 @@ public class Student {
         }
         return total;
     }
+    
     
 }

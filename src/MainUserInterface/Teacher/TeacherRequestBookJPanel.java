@@ -102,7 +102,7 @@ public class TeacherRequestBookJPanel extends javax.swing.JPanel {
     private void Request1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Request1ActionPerformed
         // TODO add your handling code here:
         TeacherVisitJPanel doctorVisit = new TeacherVisitJPanel(userProcessContainer, userAccount, ecosystem, student);
-        userProcessContainer.add("Visit Doctor", doctorVisit);
+        userProcessContainer.add("Attend Lecture", doctorVisit);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_Request1ActionPerformed
@@ -115,7 +115,7 @@ public class TeacherRequestBookJPanel extends javax.swing.JPanel {
             student.setsBookStoreStatus("Requested");
             student.setsBooksQuantity((String) BloodRequestQuantityBox.getSelectedItem());
 
-            JOptionPane.showMessageDialog(null, "Blood Request Sent", "Information Message", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Request Sent", "Information Message", JOptionPane.INFORMATION_MESSAGE);
             TeacherVisitJPanel doctorVisit = new TeacherVisitJPanel(userProcessContainer, userAccount, ecosystem, student);
             userProcessContainer.add("Attend lecture", doctorVisit);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();

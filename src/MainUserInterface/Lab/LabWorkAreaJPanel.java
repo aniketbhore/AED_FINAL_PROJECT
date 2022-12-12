@@ -100,20 +100,20 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         managePatientTable2.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         managePatientTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Id", "Age", "Email", "LabStatus"
+                "First Name", "Last Name", "Id", "Age", "Email", "LabStatus", "obj"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, false
+                false, false, false, false, true, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -132,7 +132,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Test Center");
+        jLabel1.setText("Labs");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 30, 1295, -1));
 
         jButton2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
@@ -150,7 +150,7 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, 163, 30));
 
         jButton1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton1.setText("Available Tests Info");
+        jButton1.setText("Available Lab Info");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -175,20 +175,20 @@ public class LabWorkAreaJPanel extends javax.swing.JPanel {
         managePatientTable1.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
         managePatientTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Id", "Age", "Email", "LabStatus"
+                "First Name", "Last Name", "Id", "Age", "Email", "LabStatus", "obj"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class
+                java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, false
+                false, false, false, false, true, false, true
             };
 
             public Class getColumnClass(int columnIndex) {

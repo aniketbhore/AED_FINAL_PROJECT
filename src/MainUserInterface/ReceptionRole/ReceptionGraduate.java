@@ -35,23 +35,23 @@ public class ReceptionGraduate extends javax.swing.JPanel {
     }
 
     private void populateNetworkTable() {
-        DefaultTableModel model = (DefaultTableModel) ManageCustomersTable.getModel();
+         DefaultTableModel model = (DefaultTableModel) ManageCustomersTable.getModel();
 
         model.setRowCount(0);
 
-        for (Student t : ecoSystem.getStudentDirectory().getStudentList()) {
+        for (Student patient : ecoSystem.getStudentDirectory().getStudentList()) {
 
             Object[] row = new Object[10];
-            row[0] = t.getsFirstName();
-            row[1] = t.getsLastName();
-            row[2] = t.getsGender();
-            row[3] = t.getsFellowshipID();
-            row[4] = t.getsAge();
-            row[5] = t.getsEmailAddress();
-            row[6] = t.getsFellowshipStatus();
-            row[7] = t.getsStatus();
-            row[8] = t;
-            if(t.getsStatus().equals("Ready to graduate")){
+            row[0] = patient.getsFirstName();
+            row[1] = patient.getsLastName();
+            row[2] = patient.getsGender();
+            row[3] = patient.getsFellowshipID();
+            row[4] = patient.getsAge();
+            row[5] = patient.getsEmailAddress();
+            row[6] = patient.getsFellowshipStatus();
+            row[7] = patient.getsStatus();
+            row[8] = patient;
+            if(patient.getsStatus().equals("Ready to Graduate")){
             model.addRow(row);
             }
 
@@ -83,7 +83,7 @@ public class ReceptionGraduate extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("DISMISS STUDENT");
+        jLabel1.setText("GRADUATE STUDENT");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 640, 80));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 92, 1260, 10));
 
@@ -91,20 +91,20 @@ public class ReceptionGraduate extends javax.swing.JPanel {
         ManageCustomersTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManageCustomersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Last", "Gender", "Id", "Age", "Email", "Payment", " Status"
+                "Name", "Last", "Gender", "Id", "Age", "Email", "Payment", " Status", "ob"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -120,7 +120,7 @@ public class ReceptionGraduate extends javax.swing.JPanel {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 1190, 216));
 
         btnUpdateAmbulanceRecord.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnUpdateAmbulanceRecord.setText("Discharge");
+        btnUpdateAmbulanceRecord.setText("Graduate");
         btnUpdateAmbulanceRecord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateAmbulanceRecordActionPerformed(evt);
@@ -129,13 +129,13 @@ public class ReceptionGraduate extends javax.swing.JPanel {
         jPanel1.add(btnUpdateAmbulanceRecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 430, 140, 40));
 
         btnUpdate1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnUpdate1.setText("Send to Stipend");
+        btnUpdate1.setText("Send to Fellowship Department");
         btnUpdate1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdate1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 500, 260, 40));
+        jPanel1.add(btnUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 500, 350, 40));
 
         btnUpdateAmbulanceRecord1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
         btnUpdateAmbulanceRecord1.setText("Back");

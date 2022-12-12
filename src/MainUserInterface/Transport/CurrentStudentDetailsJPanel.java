@@ -72,7 +72,7 @@ public class CurrentStudentDetailsJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("EMERGENCY DETAILS");
+        jLabel1.setText("DETAILS");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-230, 10, 1409, 80));
 
         lblPatientFirstName.setBackground(new java.awt.Color(0, 153, 204));

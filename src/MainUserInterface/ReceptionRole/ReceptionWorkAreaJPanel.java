@@ -101,20 +101,20 @@ private final JPanel userProcessContainer;
         patientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         patientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First name", "Last name", "Id", "Age", "Email Id", "Status"
+                "First name", "Last name", "Id", "Age", "Email Id", "Status", "ob"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -180,7 +180,7 @@ private final JPanel userProcessContainer;
         add(updateAmbulRecBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 800, 260, 42));
 
         jButton1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jButton1.setText("DISMISS");
+        jButton1.setText("GRADUATE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -207,8 +207,8 @@ private final JPanel userProcessContainer;
         if (selectedRow >= 0) {
 
             Student p = (Student) patientTable.getValueAt(selectedRow, 6);
-            BillJPanel patientBillJPanel = new BillJPanel(userProcessContainer, p,userAccount,ecoSystem);
-            userProcessContainer.add("Student Bill", patientBillJPanel);
+            BillJPanel studBillJPanel = new BillJPanel(userProcessContainer, p,userAccount,ecoSystem);
+            userProcessContainer.add("Student Bill", studBillJPanel);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
             populateNetworkTable();

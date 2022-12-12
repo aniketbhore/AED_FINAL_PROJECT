@@ -72,8 +72,8 @@ public class BookStore {
         this.bookDetailsList = bookDetailsList;
     }
     
-    public void AddTreatedPatientList(Student patient)
+    public void AddPastStudentsList(Student stud)
     {
-        bookRequestedStudents.add(patient);
+        bookRequestedStudents.add(stud);
     }
 }
