@@ -4,8 +4,8 @@
  */
 package MainUserInterface.Lab;
 import Business_Model.Ecosystem;
-import BusinessModel.Patient.PatientBills;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.StudentBills;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -20,18 +20,18 @@ public class LabPastRequestedTests extends javax.swing.JPanel {
     /**
      * Creates new form LabPastRequestedTest
      */
-    Patient p;
+    Student p;
     JPanel userProcessContainer;
     User account;
     Ecosystem ecoSystem;
-    public LabPastRequestedTests(JPanel userProcessContainer, User account, Patient p,Ecosystem ecoSystem) {
+    public LabPastRequestedTests(JPanel userProcessContainer, User account, Student s,Ecosystem ecoSystem) {
         initComponents();
         this.ecoSystem = ecoSystem;
         this.userProcessContainer = userProcessContainer;
         this.account = account;
-        this.p = p;
+        this.p = s;
         populateBillTable();
-        jLabel2.setText("Customer Name: "+p.getpFirstName()+" "+p.getpLastName());
+        jLabel2.setText("Student Name: "+p.getsFirstName()+" "+p.getsLastName());
 
     }
         private void populateBillTable() {
@@ -39,7 +39,7 @@ public class LabPastRequestedTests extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (PatientBills b : p.getpBills()) {
+        for (StudentBills b : p.getsBills()) {
 
             Object[] row = new Object[6];
             row[0] = b.getName();
@@ -54,7 +54,6 @@ public class LabPastRequestedTests extends javax.swing.JPanel {
 
         }
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -129,7 +128,7 @@ public class LabPastRequestedTests extends javax.swing.JPanel {
         // TODO add your handling code here:
         //patient.setInsuranceStatus("Approved");
         LabWorkAreaJPanel bill = new LabWorkAreaJPanel(userProcessContainer, account, ecoSystem);
-        userProcessContainer.add("Insurance main", bill);
+        userProcessContainer.add("Fellowship main", bill);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_jButton2ActionPerformed

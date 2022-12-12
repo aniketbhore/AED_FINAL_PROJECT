@@ -5,7 +5,7 @@
 package MainUserInterface.Police;
 
 import Business_Model.Ecosystem;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -31,49 +31,49 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.ecoSystem = business;
         this.account = account;
-        populatePatientTable();
-        populatePatientTable1();
+        populateStudentTable();
+        populateStudentTable1();
     }
 
-    private void populatePatientTable() {
+    private void populateStudentTable() {
         DefaultTableModel model = (DefaultTableModel) managePatientTable.getModel();
 
         model.setRowCount(0);
 
-        for (Patient patient : ecoSystem.getPoliceRecords().getPoliceRecordsList()) {
+        for (Student stud : ecoSystem.getPoliceRecords().getPoliceRecordsList()) {
 
             Object[] row = new Object[8];
-            row[0] = patient.getpFirstName();
-            row[1] = patient.getpLastName();           
-            row[2] = patient.getpHealthInsuranceID();
-            row[3] = patient.getpAge();
-            row[4] = patient.getpAddress();
-            row[5] = patient.getpEmailAddress();
-            row[6] = patient.getpPoliceStatus();
-            row[7] = patient;
-            if(patient.getpPoliceStatus().equals("Verifying")){
+            row[0] = stud.getsFirstName();
+            row[1] = stud.getsLastName();           
+            row[2] = stud.getsFellowshipID();
+            row[3] = stud.getsAge();
+            row[4] = stud.getsAddress();
+            row[5] = stud.getsEmailAddress();
+            row[6] = stud.getsPoliceStatus();
+            row[7] = stud;
+            if(stud.getsPoliceStatus().equals("Verifying")){
             model.addRow(row);}
 
         }
     }
     
-    private void populatePatientTable1() {
+    private void populateStudentTable1() {
         DefaultTableModel model = (DefaultTableModel) managePatientTable1.getModel();
 
         model.setRowCount(0);
 
-        for (Patient patient : ecoSystem.getPoliceRecords().getPoliceRecordsList()) {
+        for (Student s : ecoSystem.getPoliceRecords().getPoliceRecordsList()) {
 
             Object[] row = new Object[8];
-            row[0] = patient.getpFirstName();
-            row[1] = patient.getpLastName();
-            row[2] = patient.getpHealthInsuranceID();
-            row[3] = patient.getpAge();
-            row[4] = patient.getpAddress();
-            row[5] = patient.getpEmailAddress();
-            row[6] = patient.getpPoliceStatus();
-            row[7] = patient;
-            if(!patient.getpPoliceStatus().equals("Verifying")){
+            row[0] = s.getsFirstName();
+            row[1] = s.getsLastName();
+            row[2] = s.getsFellowshipID();
+            row[3] = s.getsAge();
+            row[4] = s.getsAddress();
+            row[5] = s.getsEmailAddress();
+            row[6] = s.getsPoliceStatus();
+            row[7] = s;
+            if(!s.getsPoliceStatus().equals("Verifying")){
             model.addRow(row);}
 
         }
@@ -209,7 +209,7 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
         }
         else{
 
-            Patient d = (Patient) managePatientTable.getValueAt(selectedRow, 7);
+            Student d = (Student) managePatientTable.getValueAt(selectedRow, 7);
             PersonInfo bill = new PersonInfo(userProcessContainer,ecoSystem, d,account);
             userProcessContainer.add("Police Person Info", bill);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -226,10 +226,10 @@ public class PoliceWorkAreaJPanel extends javax.swing.JPanel {
         }
         else{
 
-            Patient d = (Patient) managePatientTable1.getValueAt(selectedRow, 7);
+            Student d = (Student) managePatientTable1.getValueAt(selectedRow, 7);
             //d.get
             PastInfo bill = new PastInfo(userProcessContainer,ecoSystem, d,account);
-            userProcessContainer.add("Past Info", bill);
+            userProcessContainer.add("Past Information", bill);
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
 

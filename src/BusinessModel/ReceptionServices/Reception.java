@@ -3,20 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package BusinessModel.ReceptionServices;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import java.util.ArrayList;
 /**
  *
  * @author aniketbhore
  */
 public class Reception {
-     private ArrayList<Patient> patientRecord;
+     private ArrayList<Student> patientRecord;
 
-    public ArrayList<Patient> getPatientRecord() {
+    public ArrayList<Student> getPatientRecord() {
         return patientRecord;
     }
 
-    public void setPatientRecord(ArrayList<Patient> patientRecord) {
+    public void setPatientRecord(ArrayList<Student> patientRecord) {
         this.patientRecord = patientRecord;
     }
 }

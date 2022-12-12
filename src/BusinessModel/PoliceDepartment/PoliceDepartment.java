@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package BusinessModel.PoliceDepartment;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.Student;
 import java.util.ArrayList;
 /**
  *
@@ -13,7 +13,7 @@ public class PoliceDepartment {
     private String departmentName;
     private String userName;
     private String address;
-    private ArrayList<Patient> policeRecordsList;
+    private ArrayList<Student> policeRecordsList;
 
     public PoliceDepartment() {
         policeRecordsList = new ArrayList<>();
@@ -43,16 +43,16 @@ public class PoliceDepartment {
         this.address = address;
     }
 
-    public ArrayList<Patient> getPoliceRecordsList() {
+    public ArrayList<Student> getPoliceRecordsList() {
         return policeRecordsList;
     }
 
-    public void setPoliceRecordsList(ArrayList<Patient> policeRecordsList) {
+    public void setPoliceRecordsList(ArrayList<Student> policeRecordsList) {
         this.policeRecordsList = policeRecordsList;
     }
-    public void addtoRecord(Patient patient)
+    public void addtoRecord(Student patient)
     {
-      /*  for(Patient p:labRecordsList){
+      /*  for(Student p:labRecordsList){
         if(!labRecordsList.contains(patient)){
         labRecordsList.add(patient);
         }

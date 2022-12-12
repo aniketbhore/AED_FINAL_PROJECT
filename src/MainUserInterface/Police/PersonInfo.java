@@ -5,9 +5,8 @@
 package MainUserInterface.Police;
 
 import Business_Model.Ecosystem;
-import Business_Model.Ecosystem;
-import BusinessModel.Patient.PatientBills;
-import BusinessModel.Patient.Patient;
+import BusinessModel.Student.StudentBills;
+import BusinessModel.Student.Student;
 import BusinessModel.UserAccount.User;
 import java.awt.CardLayout;
 import java.text.SimpleDateFormat;
@@ -24,28 +23,28 @@ public class PersonInfo extends javax.swing.JPanel {
      * Creates new form PersonInfo
      */
     JPanel userProcessContainer;
-    Patient patient;
+    Student stud;
     Ecosystem ecoSystem;
     User account;
-    public PersonInfo(JPanel userProcessContainer, Ecosystem business, Patient p,User account) {
+    public PersonInfo(JPanel userProcessContainer, Ecosystem business, Student p,User account) {
         initComponents();
         this.ecoSystem = business;
         this.userProcessContainer = userProcessContainer;
-        this.patient = p;
+        this.stud = p;
         this.account = account;
-        txtFirstName.setText(p.getpFirstName());
-        txtLastName.setText(p.getpLastName());
-        txtAddress.setText(p.getpAddress());
+        txtFirstName.setText(p.getsFirstName());
+        txtLastName.setText(p.getsLastName());
+        txtAddress.setText(p.getsAddress());
         try{
         SimpleDateFormat input =new SimpleDateFormat("yyyy-MM-dd");
-        txtAge.setText((input.format(p.getPdob())));
+        txtAge.setText((input.format(p.getsdob())));
         }
         catch(Exception e){}
-        txtGender.setText(p.getpGender());
-        txtHealthInsuranceID.setText(p.getpHealthInsuranceID());
-        txtPhoneNumber.setText(p.getpPhoneNo());
-        txtInsuranceStatus.setText(p.getpAccidentLocation());
-        txtPoliceVerification.setText(p.getpPoliceStatus());
+        txtGender.setText(p.getsGender());
+        txtHealthInsuranceID.setText(p.getsFellowshipID());
+        txtPhoneNumber.setText(p.getsPhoneNo());
+        txtInsuranceStatus.setText(p.getsPickupLocation());
+        txtPoliceVerification.setText(p.getsPoliceStatus());
     }
 
     /**
@@ -241,7 +240,7 @@ public class PersonInfo extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        patient.setpPoliceStatus("Verified");
+        stud.setsPoliceStatus("Verified");
         PoliceWorkAreaJPanel bill = new PoliceWorkAreaJPanel(userProcessContainer,account,ecoSystem);
         userProcessContainer.add("Police Workarea", bill);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -250,7 +249,7 @@ public class PersonInfo extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        patient.setpPoliceStatus("Rejected");
+        stud.setsPoliceStatus("Rejected");
         PoliceWorkAreaJPanel bill = new PoliceWorkAreaJPanel(userProcessContainer,account,ecoSystem);
         userProcessContainer.add("Police Workarea", bill);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();

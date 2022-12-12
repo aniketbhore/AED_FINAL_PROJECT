@@ -4,13 +4,13 @@
  */
 package Business_Model;
 
-import BusinessModel.Ambulance.AmbulanceDirectory;
-import BusinessModel.BloodBank.BloodBank;
-import BusinessModel.Doctor.DoctorDirectory;
-import BusinessModel.Insurance.InsuranceDirectory;
+import BusinessModel.Transport.TransportDirectory;
+import BusinessModel.BookStore.BookStore;
+import BusinessModel.Teacher.TeacherDirectory;
+import BusinessModel.Fellowship.FellowshipDirectory;
 import BusinessModel.Lab.Lab;
-import BusinessModel.Patient.PatientDirectory;
-import BusinessModel.Pharmacy.Pharmacy;
+import BusinessModel.Student.StudentDirectory;
+import BusinessModel.Inventory.Inventory;
 import BusinessModel.PoliceDepartment.PoliceDepartment;
 import BusinessModel.Roles.Role;
 import BusinessModel.Roles.Administrator;
@@ -32,13 +32,13 @@ import javax.mail.internet.MimeMessage;
  */
 public class Ecosystem extends Organisation{
     private static Ecosystem business;
-    private PatientDirectory patientDirectory;
-    private DoctorDirectory doctorDirectory;
-    private AmbulanceDirectory ambulanceDirectory;
-    private BloodBank bloodBank;
+    private StudentDirectory studentDirectory;
+    private TeacherDirectory teacherDirectory;
+    private TransportDirectory transportDirectory;
+    private BookStore bookStore;
     private Lab lab;
-    private Pharmacy pharmacy;
-    private InsuranceDirectory insuranceDirectory;
+    private Inventory inventory;
+    private FellowshipDirectory fellowshipDirectory;
     private PoliceDepartment policeRecords;
     
     public static Ecosystem getInstance()
@@ -59,36 +59,45 @@ public class Ecosystem extends Organisation{
         Ecosystem.business = business;
     }
 
-    public PatientDirectory getPatientDirectory() {
-        return patientDirectory = (patientDirectory == null) ? new PatientDirectory() : patientDirectory;
+    public StudentDirectory getStudentDirectory() {
+        return studentDirectory;
     }
 
-    public void setPatientDirectory(PatientDirectory patientDirectory) {
-        this.patientDirectory = patientDirectory;
+    public void setStudentDirectory(StudentDirectory studentDirectory) {
+        this.studentDirectory = studentDirectory;
     }
 
-    public DoctorDirectory getDoctorDirectory() {
-        return doctorDirectory = (doctorDirectory == null) ? new DoctorDirectory() : doctorDirectory;
+    public TeacherDirectory getTeacherDirectory() {
+        return teacherDirectory;
     }
 
-    public void setDoctorDirectory(DoctorDirectory doctorDirectory) {
-        this.doctorDirectory = doctorDirectory;
+    public void setTeacherDirectory(TeacherDirectory teacherDirectory) {
+        this.teacherDirectory = teacherDirectory;
     }
 
-    public AmbulanceDirectory getAmbulanceDirectory() {
-        return ambulanceDirectory = (ambulanceDirectory == null) ? new AmbulanceDirectory() : ambulanceDirectory;
+    public TransportDirectory getTransportDirectory() {
+        return transportDirectory;
     }
 
-    public void setAmbulanceDirectory(AmbulanceDirectory ambulanceDirectory) {
-        this.ambulanceDirectory = ambulanceDirectory;
+    public void setTransportDirectory(TransportDirectory transportDirectory) {
+        this.transportDirectory = transportDirectory;
     }
 
-    public BloodBank getBloodBank() {
-        return bloodBank = (bloodBank == null) ? new BloodBank() : bloodBank;
+
+    public BookStore getBookStore() {
+        return bookStore;
     }
 
-    public void setBloodBank(BloodBank bloodBank) {
-        this.bloodBank = bloodBank;
+    public void setBookStore(BookStore bookStore) {
+        this.bookStore = bookStore;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
     }
 
     public Lab getLab() {
@@ -99,20 +108,12 @@ public class Ecosystem extends Organisation{
         this.lab = lab;
     }
 
-    public Pharmacy getPharmacy() {
-        return pharmacy = (pharmacy == null)? new Pharmacy() : pharmacy;
+    public FellowshipDirectory getFellowshipDirectory() {
+        return fellowshipDirectory;
     }
 
-    public void setPharmacy(Pharmacy pharmacy) {
-        this.pharmacy = pharmacy;
-    }
-
-    public InsuranceDirectory getInsuranceDirectory() {
-        return insuranceDirectory = (insuranceDirectory == null)? new InsuranceDirectory() : insuranceDirectory;
-    }
-
-    public void setInsuranceDirectory(InsuranceDirectory insuranceDirectory) {
-        this.insuranceDirectory = insuranceDirectory;
+    public void setFellowshipDirectory(FellowshipDirectory fellowshipDirectory) {
+        this.fellowshipDirectory = fellowshipDirectory;
     }
 
     public PoliceDepartment getPoliceRecords() {
