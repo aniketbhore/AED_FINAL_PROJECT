@@ -421,7 +421,7 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
 
         lblErrorUserName.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N
         lblErrorUserName.setForeground(new java.awt.Color(255, 51, 51));
-        lblErrorUserName.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/Neu_logo.png")); // NOI18N
+        lblErrorUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainUserInterface/Images/Neu_logo.png"))); // NOI18N
         add(lblErrorUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 180, 230, -1));
 
         lblErrorPassword.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N

@@ -73,13 +73,16 @@ public class MainJFrame extends javax.swing.JFrame {
         leftContainer.setBackground(new java.awt.Color(255, 255, 255));
         leftContainer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        signOutBtn.setBackground(new java.awt.Color(255, 0, 0));
+        signOutBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        signOutBtn.setForeground(new java.awt.Color(255, 255, 255));
         signOutBtn.setText("Logout");
         signOutBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signOutBtnActionPerformed(evt);
             }
         });
-        leftContainer.add(signOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
+        leftContainer.add(signOutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
 
         userNameInputField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +100,9 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2.setText("User Name");
         leftContainer.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
+        signInBtn.setBackground(new java.awt.Color(51, 204, 0));
+        signInBtn.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        signInBtn.setForeground(new java.awt.Color(255, 255, 255));
         signInBtn.setText("Login");
         signInBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,11 +116,11 @@ public class MainJFrame extends javax.swing.JFrame {
         mainContainer.setLayout(new java.awt.CardLayout());
 
         homeDisplay.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        homeDisplay.setIcon(new javax.swing.ImageIcon("/Users/nehashende/Desktop/aed/AEDprojIMG/new_snow.jpeg")); // NOI18N
+        homeDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainUserInterface/Images/WhatsApp Image 2022-12-11 at 5.13.21 PM.jpeg"))); // NOI18N
         homeDisplay.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         homeDisplay.setMaximumSize(new java.awt.Dimension(800, 600));
         homeDisplay.setMinimumSize(new java.awt.Dimension(800, 600));
-        homeDisplay.setPreferredSize(new java.awt.Dimension(800, 600));
+        homeDisplay.setPreferredSize(new java.awt.Dimension(600, 400));
         mainContainer.add(homeDisplay, "card2");
 
         jSplitPane1.setRightComponent(mainContainer);

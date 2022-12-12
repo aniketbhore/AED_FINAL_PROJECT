@@ -79,7 +79,7 @@ public class PharmacyRequestedTests extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Patient Request");
+        jLabel1.setText("Request");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-220, 40, 1414, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1434, 10));
 

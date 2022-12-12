@@ -70,7 +70,7 @@ public class PatientBillJPanel extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 10, 1300, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1300, 10));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/aniketbhore/Downloads/istockphoto-1089688182-612x612.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MainUserInterface/Images/istockphoto-1089688182-612x612.jpg"))); // NOI18N
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 170, 610, 420));
 
         BillTalble.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N

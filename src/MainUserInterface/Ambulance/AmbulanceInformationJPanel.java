@@ -57,39 +57,38 @@ public class AmbulanceInformationJPanel extends javax.swing.JPanel {
         lblErrorAge = new javax.swing.JLabel();
         lblErrorVNumber = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 129, 190));
+        setBackground(new java.awt.Color(153, 153, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 178, 209));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 129, 190));
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 51, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ADD SCHOOL-BUS AND DRIVER");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 1434, 78));
 
         lblDriverFirstName.setBackground(new java.awt.Color(255, 255, 255));
         lblDriverFirstName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblDriverFirstName.setForeground(new java.awt.Color(204, 0, 0));
+        lblDriverFirstName.setForeground(new java.awt.Color(255, 255, 255));
         lblDriverFirstName.setText("Driver First Name");
-        jPanel1.add(lblDriverFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 440, -1, -1));
+        jPanel1.add(lblDriverFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, -1, -1));
 
         txtFirstName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtFirstNameKeyReleased(evt);
             }
         });
-        jPanel1.add(txtFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 280, 30));
+        jPanel1.add(txtFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 280, 30));
 
         lblDriverLastName.setBackground(new java.awt.Color(255, 255, 255));
         lblDriverLastName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblDriverLastName.setForeground(new java.awt.Color(204, 0, 0));
+        lblDriverLastName.setForeground(new java.awt.Color(255, 255, 255));
         lblDriverLastName.setText("Driver Last Name");
-        jPanel1.add(lblDriverLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 520, -1, -1));
+        jPanel1.add(lblDriverLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
 
         txtLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,13 +100,13 @@ public class AmbulanceInformationJPanel extends javax.swing.JPanel {
                 txtLastNameKeyReleased(evt);
             }
         });
-        jPanel1.add(txtLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, 280, 30));
+        jPanel1.add(txtLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 280, 30));
 
         lblVehicleNumber.setBackground(new java.awt.Color(255, 255, 255));
         lblVehicleNumber.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblVehicleNumber.setForeground(new java.awt.Color(204, 0, 0));
+        lblVehicleNumber.setForeground(new java.awt.Color(255, 255, 255));
         lblVehicleNumber.setText("Vehicle Number");
-        jPanel1.add(lblVehicleNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, -1, -1));
+        jPanel1.add(lblVehicleNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, -1, -1));
 
         txtVehicleNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,13 +118,13 @@ public class AmbulanceInformationJPanel extends javax.swing.JPanel {
                 txtVehicleNumberKeyReleased(evt);
             }
         });
-        jPanel1.add(txtVehicleNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 520, 280, 30));
+        jPanel1.add(txtVehicleNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 280, 30));
 
         lblDriverAge.setBackground(new java.awt.Color(255, 255, 255));
         lblDriverAge.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblDriverAge.setForeground(new java.awt.Color(204, 0, 0));
+        lblDriverAge.setForeground(new java.awt.Color(255, 255, 255));
         lblDriverAge.setText("Driver Age");
-        jPanel1.add(lblDriverAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 440, -1, -1));
+        jPanel1.add(lblDriverAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
 
         txtAge.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,17 +136,16 @@ public class AmbulanceInformationJPanel extends javax.swing.JPanel {
                 txtAgeKeyReleased(evt);
             }
         });
-        jPanel1.add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 440, 280, 30));
+        jPanel1.add(txtAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 280, 30));
 
         btnSubmit.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnSubmit.setForeground(new java.awt.Color(0, 153, 204));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 680, 133, 43));
+        jPanel1.add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 500, 133, 43));
 
         lblErrorLname.setBackground(new java.awt.Color(255, 255, 255));
         lblErrorLname.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N
@@ -171,7 +169,6 @@ public class AmbulanceInformationJPanel extends javax.swing.JPanel {
 
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 90, 1434, -1));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 690, 310));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
@@ -264,7 +261,6 @@ public class AmbulanceInformationJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmit;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblDriverAge;
