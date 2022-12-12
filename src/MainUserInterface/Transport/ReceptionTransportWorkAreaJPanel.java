@@ -135,7 +135,7 @@ public class ReceptionTransportWorkAreaJPanel extends javax.swing.JPanel {
         add(txtPatientFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, 250, 30));
 
         Route_JButton.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        Route_JButton.setForeground(new java.awt.Color(204, 0, 0));
+        Route_JButton.setForeground(new java.awt.Color(255, 255, 255));
         Route_JButton.setText("VIEW ROUTE");
         Route_JButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,13 +202,12 @@ public class ReceptionTransportWorkAreaJPanel extends javax.swing.JPanel {
         stud.setsBookStoreStatus("NewStudent");
         stud.setsInventoryStatus("NewStudent");
         stud.setsLabStatus("NewPatient");
-       // stud.setsDateOfAdmit(java.util.Calendar.getInstance().getTime());
+        // stud.setsDateOfAdmit(java.util.Calendar.getInstance().getTime());
 
         //       GoogleMapsAmbulanceJPanel GoogleMapsWorkAreaJPanel = new GoogleMapsAmbulanceJPanel(userProcessContainer, ecoSystem, userAccount, ambulance, txtPatientLocation.getText(), patient);
         //        userProcessContainer.add("Google Maps Work Area", GoogleMapsWorkAreaJPanel);
         //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         //        layout.next(userProcessContainer);
-
     }//GEN-LAST:event_Route_JButtonActionPerformed
 
 
