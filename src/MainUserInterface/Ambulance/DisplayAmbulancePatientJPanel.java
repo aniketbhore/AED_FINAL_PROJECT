@@ -49,27 +49,26 @@ public class DisplayAmbulancePatientJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         AmbulanceTable = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(153, 153, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText(" DETAILS");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1409, 80));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 1409, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1432, 10));
 
-        btnCurrentPatient.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnCurrentPatient.setForeground(new java.awt.Color(0, 153, 204));
+        btnCurrentPatient.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnCurrentPatient.setText("Current Student");
         btnCurrentPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCurrentPatientActionPerformed(evt);
             }
         });
-        add(btnCurrentPatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, 200, 40));
+        add(btnCurrentPatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 510, 200, 40));
 
-        AmbulanceTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         AmbulanceTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -78,7 +77,7 @@ public class DisplayAmbulancePatientJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Driver First Name", "Driver Last Name", "Age", "Vehicle Number", "Ambulance Status"
+                "Driver First Name", "Driver Last Name", "Age", "Vehicle Number", "Status"
             }
         ) {
             Class[] types = new Class [] {
@@ -98,7 +97,7 @@ public class DisplayAmbulancePatientJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(AmbulanceTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 1390, 191));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 1390, 191));
     }// </editor-fold>//GEN-END:initComponents
 private void PopulateAmbulanceTable() {
         DefaultTableModel model = (DefaultTableModel) AmbulanceTable.getModel();

@@ -73,10 +73,12 @@ public class DoctorVisitJPanel extends javax.swing.JPanel {
         btnRequestMedicine1 = new javax.swing.JButton();
         btnRequestMedicine2 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Student History");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 1382, 60));
@@ -111,9 +113,9 @@ public class DoctorVisitJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(BillTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 1420, 191));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 1260, 191));
 
-        btnRequestLabTests.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnRequestLabTests.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestLabTests.setText("Book Lab Session");
         btnRequestLabTests.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +124,7 @@ public class DoctorVisitJPanel extends javax.swing.JPanel {
         });
         add(btnRequestLabTests, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 200, 60));
 
-        btnRequestBlood.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnRequestBlood.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestBlood.setText("Request Book");
         btnRequestBlood.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,32 +133,32 @@ public class DoctorVisitJPanel extends javax.swing.JPanel {
         });
         add(btnRequestBlood, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 170, 60));
 
-        btnRequestMedicine.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnRequestMedicine.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestMedicine.setText("Request Meal Plan");
         btnRequestMedicine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestMedicineActionPerformed(evt);
             }
         });
-        add(btnRequestMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 200, 60));
+        add(btnRequestMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 360, 220, 60));
 
-        btnRequestMedicine1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnRequestMedicine1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestMedicine1.setText("Graduate");
         btnRequestMedicine1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestMedicine1ActionPerformed(evt);
             }
         });
-        add(btnRequestMedicine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 370, 180, 50));
+        add(btnRequestMedicine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 360, 210, 60));
 
-        btnRequestMedicine2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnRequestMedicine2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnRequestMedicine2.setText("Term Complete");
         btnRequestMedicine2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestMedicine2ActionPerformed(evt);
             }
         });
-        add(btnRequestMedicine2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1320, 370, 160, 50));
+        add(btnRequestMedicine2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 360, 200, 60));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestLabTestsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestLabTestsActionPerformed

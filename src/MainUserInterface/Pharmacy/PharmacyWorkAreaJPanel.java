@@ -110,13 +110,16 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane6 = new javax.swing.JScrollPane();
         managePatientTable2 = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(255, 204, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(15, 85, 177));
+        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Pharmacy");
+        jLabel1.setText("Inventory");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1211, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(255, 129, 190));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1221, 10));
 
         managePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 12)); // NOI18N
@@ -128,7 +131,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First", "Last", "PharmaStatus", "HealthId", "Age", "Address", "Email"
+                "First", "Last", "Status", "Id", "Age", "Address", "Email"
             }
         ) {
             Class[] types = new Class [] {
@@ -150,7 +153,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 132, 931, 195));
 
-        jButton1.setBackground(new java.awt.Color(15, 85, 177));
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Update Inventory");
@@ -191,9 +194,11 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane5.setViewportView(managePatientTable1);
 
         add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 132, 931, 195));
+
+        jLabel5.setBackground(new java.awt.Color(255, 204, 204));
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 1240));
 
-        jButton3.setBackground(new java.awt.Color(15, 85, 177));
+        jButton3.setBackground(new java.awt.Color(204, 0, 51));
         jButton3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("View Request");
@@ -204,7 +209,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(904, 650, -1, 41));
 
-        jButton2.setBackground(new java.awt.Color(15, 85, 177));
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
         jButton2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("View Request");
@@ -224,7 +229,7 @@ public class PharmacyWorkAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First", "Last", "PharmaStatus", "HealthId", "Age", "Address", "Email"
+                "First", "Last", "Status", "Id", "Age", "Address", "Email"
             }
         ) {
             Class[] types = new Class [] {

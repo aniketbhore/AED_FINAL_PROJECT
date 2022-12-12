@@ -78,7 +78,7 @@ public class ReceptionDischarge extends javax.swing.JPanel {
         btnUpdate1 = new javax.swing.JButton();
         btnUpdateAmbulanceRecord1 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel1.setBackground(new java.awt.Color(102, 0, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 36)); // NOI18N
@@ -92,20 +92,20 @@ public class ReceptionDischarge extends javax.swing.JPanel {
         ManageCustomersTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManageCustomersTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Last", "Gender", "Id", "Age", "Email", "Payment", " Status", "obj"
+                "Name", "Last", "Gender", "Id", "Age", "Email", "Payment", " Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -121,34 +121,31 @@ public class ReceptionDischarge extends javax.swing.JPanel {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 1190, 216));
 
         btnUpdateAmbulanceRecord.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnUpdateAmbulanceRecord.setForeground(new java.awt.Color(0, 153, 204));
         btnUpdateAmbulanceRecord.setText("Discharge");
         btnUpdateAmbulanceRecord.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateAmbulanceRecordActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdateAmbulanceRecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 450, 140, 40));
+        jPanel1.add(btnUpdateAmbulanceRecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 430, 140, 40));
 
         btnUpdate1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnUpdate1.setForeground(new java.awt.Color(0, 153, 204));
         btnUpdate1.setText("Send to Stipend");
         btnUpdate1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdate1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 450, 260, 40));
+        jPanel1.add(btnUpdate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 500, 260, 40));
 
         btnUpdateAmbulanceRecord1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnUpdateAmbulanceRecord1.setForeground(new java.awt.Color(0, 153, 204));
         btnUpdateAmbulanceRecord1.setText("Back");
         btnUpdateAmbulanceRecord1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateAmbulanceRecord1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdateAmbulanceRecord1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 30, 120, 40));
+        jPanel1.add(btnUpdateAmbulanceRecord1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

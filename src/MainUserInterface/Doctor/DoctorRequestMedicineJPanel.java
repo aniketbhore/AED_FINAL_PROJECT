@@ -112,16 +112,19 @@ public class DoctorRequestMedicineJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         Request = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Request Meal Plan");
+        jLabel1.setText("Request ");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 530, -1));
 
-        jLabel2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel2.setText("Available Meals");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Available");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         tableRequestMedicine1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         tableRequestMedicine1.setModel(new javax.swing.table.DefaultTableModel(
@@ -152,7 +155,7 @@ public class DoctorRequestMedicineJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tableRequestMedicine1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 510, 170));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 720, 170));
 
         btnAddMedicine1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 12)); // NOI18N
         btnAddMedicine1.setText("ADD");
@@ -161,7 +164,7 @@ public class DoctorRequestMedicineJPanel extends javax.swing.JPanel {
                 btnAddMedicine1ActionPerformed(evt);
             }
         });
-        add(btnAddMedicine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 90, 47));
+        add(btnAddMedicine1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 170, 90, 47));
 
         btnRemoveMedicine.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 14)); // NOI18N
         btnRemoveMedicine.setText("REMOVE");
@@ -170,7 +173,7 @@ public class DoctorRequestMedicineJPanel extends javax.swing.JPanel {
                 btnRemoveMedicineActionPerformed(evt);
             }
         });
-        add(btnRemoveMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 120, 46));
+        add(btnRemoveMedicine, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 290, 120, 46));
 
         cartTableMedicines.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         cartTableMedicines.setModel(new javax.swing.table.DefaultTableModel(
@@ -201,29 +204,30 @@ public class DoctorRequestMedicineJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(cartTableMedicines);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 160, 500, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 770, 170));
 
-        Request1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        Request1.setText(" BACK");
+        Request1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        Request1.setText("Back");
         Request1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Request1ActionPerformed(evt);
             }
         });
-        add(Request1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 40, 110, 42));
+        add(Request1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 740, 110, 42));
 
-        jLabel3.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel3.setText("Selected Meals");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 120, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Selected ");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, -1, -1));
 
-        Request.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        Request.setText("REQUEST MEAL");
+        Request.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        Request.setText("Request");
         Request.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RequestActionPerformed(evt);
             }
         });
-        add(Request, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 230, 42));
+        add(Request, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 560, 160, 42));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddMedicine1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddMedicine1ActionPerformed

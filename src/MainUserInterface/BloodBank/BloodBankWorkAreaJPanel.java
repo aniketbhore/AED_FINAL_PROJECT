@@ -103,32 +103,34 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         btnTreatedPatientList = new javax.swing.JButton();
         btnBloodBankInfo = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Snell Library");
+        jLabel2.setText("BOOKSTORE");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1270, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1280, 10));
 
         ManagePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManagePatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity", "obj"
+                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -141,53 +143,54 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(ManagePatientTable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 860, 191));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 1150, 190));
 
         lblCommunity.setBackground(new java.awt.Color(255, 255, 255));
         lblCommunity.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        lblCommunity.setForeground(new java.awt.Color(255, 255, 255));
         lblCommunity.setText("Book Request Status");
-        add(lblCommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 120, -1, 30));
+        add(lblCommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, 30));
 
         BloodRequestStatusBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BloodRequestStatusBoxActionPerformed(evt);
             }
         });
-        add(BloodRequestStatusBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 120, 162, 30));
+        add(BloodRequestStatusBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 162, 30));
 
         btnProcessRequest.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnProcessRequest.setForeground(new java.awt.Color(0, 153, 204));
         btnProcessRequest.setText("Process Request");
         btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProcessRequestActionPerformed(evt);
             }
         });
-        add(btnProcessRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 200, 190, 40));
+        add(btnProcessRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 190, 40));
 
         lblPatientBill.setBackground(new java.awt.Color(255, 255, 255));
         lblPatientBill.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblPatientBill.setForeground(new java.awt.Color(255, 255, 255));
         lblPatientBill.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPatientBill.setText("BILLS");
-        add(lblPatientBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 360, 1270, 83));
+        add(lblPatientBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 1270, 83));
 
         BillTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         BillTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Item Name", "Organization", "Amount", "obj"
+                "Item Name", "Organization", "Amount"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -200,27 +203,25 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(BillTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 456, 1270, 191));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 1160, 191));
 
         btnTreatedPatientList.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnTreatedPatientList.setForeground(new java.awt.Color(0, 153, 204));
         btnTreatedPatientList.setText("Show Treated Patient List");
         btnTreatedPatientList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTreatedPatientListActionPerformed(evt);
             }
         });
-        add(btnTreatedPatientList, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 700, 300, 40));
+        add(btnTreatedPatientList, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 800, 300, 40));
 
         btnBloodBankInfo.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnBloodBankInfo.setForeground(new java.awt.Color(0, 153, 204));
         btnBloodBankInfo.setText("Blood Bank Information");
         btnBloodBankInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBloodBankInfoActionPerformed(evt);
             }
         });
-        add(btnBloodBankInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 700, 270, 40));
+        add(btnBloodBankInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 800, 270, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void BloodRequestStatusBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BloodRequestStatusBoxActionPerformed

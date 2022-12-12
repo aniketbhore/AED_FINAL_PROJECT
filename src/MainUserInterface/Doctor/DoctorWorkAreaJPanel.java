@@ -114,36 +114,39 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         PatientTable1 = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(0, 153, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblManageCustomers.setBackground(new java.awt.Color(0, 0, 0));
-        lblManageCustomers.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
+        lblManageCustomers.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        lblManageCustomers.setForeground(new java.awt.Color(255, 255, 255));
         lblManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblManageCustomers.setText("Doctor WorkArea");
+        lblManageCustomers.setText(" WorkArea");
         add(lblManageCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(-60, 20, 1238, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1404, 10));
 
-        jLabel2.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel2.setText("Patients Assigned to me");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, 220, -1));
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Assigned");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 230, -1));
 
         PatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         PatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Injury", "Blood Type", "Age", "Gender", "Email", "obj"
+                "First Name", "Last Name", "Student Type", "Blood Type", "Age", "Gender", "Email"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -156,38 +159,39 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(PatientTable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 740, 191));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 1050, 170));
 
-        btnVisitPatient.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
+        btnVisitPatient.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnVisitPatient.setText("Visit");
         btnVisitPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVisitPatientActionPerformed(evt);
             }
         });
-        add(btnVisitPatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 370, 120, 44));
+        add(btnVisitPatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 360, 120, 44));
 
-        jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 18)); // NOI18N
-        jLabel1.setText("My Previously Treated Patients");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 440, 280, 34));
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Previous");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 310, 34));
 
         PatientTable1.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         PatientTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "First Name", "Last Name", "Injury", "Blood Type", "Age", "Gender", "Email", "obj"
+                "First Name", "Last Name", "Student Type", "Blood Type", "Age", "Gender", "Email"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -200,7 +204,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(PatientTable1);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 730, 191));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 1040, 191));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVisitPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisitPatientActionPerformed

@@ -74,6 +74,7 @@ public class LabRequestedTests extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         BillTable = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(0, 102, 204));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -84,26 +85,30 @@ public class LabRequestedTests extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 510, -1));
 
         jButton2.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 153, 204));
         jButton2.setText("Back");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 20, 140, 40));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 580, 140, 40));
+
+        txtResult.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtResultActionPerformed(evt);
+            }
+        });
         add(txtResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(742, 360, 234, 44));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 79, 1517, 10));
 
         jButton1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 153, 204));
         jButton1.setText("Update Result");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(994, 359, 157, 44));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 360, 220, 44));
 
         jLabel3.setFont(new java.awt.Font("Georgia", 1, 16)); // NOI18N
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(151, 94, 380, 36));
@@ -185,6 +190,10 @@ public class LabRequestedTests extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResultActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtResultActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

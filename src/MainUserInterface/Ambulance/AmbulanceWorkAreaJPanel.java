@@ -70,18 +70,17 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         btnAssignPatient = new javax.swing.JButton();
         btnSubmit1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(153, 153, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Microsoft JhengHei", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("EXISTING DRIVERS DETAILS");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 950, 80));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 950, 80));
 
-        ManageAmbulanceTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         ManageAmbulanceTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -90,7 +89,7 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Driver First Name", "Driver Last Name", "Age", "Vehicle Number", "Ambulance Status"
+                "Driver First Name", "Driver Last Name", "Age", "Vehicle Number", "Status"
             }
         ) {
             Class[] types = new Class [] {
@@ -110,41 +109,35 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(ManageAmbulanceTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 1290, 231));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, 610, 410));
 
-        btnCreateAmbulance.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnCreateAmbulance.setForeground(new java.awt.Color(0, 153, 204));
-        btnCreateAmbulance.setText("Create Ambulance");
+        btnCreateAmbulance.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnCreateAmbulance.setText("Create");
         btnCreateAmbulance.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateAmbulanceActionPerformed(evt);
             }
         });
-        add(btnCreateAmbulance, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 700, 204, 46));
+        add(btnCreateAmbulance, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 210, 46));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 127, 1280, 10));
 
-        btnAssignPatient.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        btnAssignPatient.setForeground(new java.awt.Color(0, 153, 204));
-        btnAssignPatient.setText("Call Ambulance");
+        btnAssignPatient.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        btnAssignPatient.setText("Call ");
         btnAssignPatient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignPatientActionPerformed(evt);
             }
         });
-        add(btnAssignPatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 700, 192, 46));
+        add(btnAssignPatient, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 192, 46));
 
-        btnSubmit1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        btnSubmit1.setForeground(new java.awt.Color(0, 153, 204));
+        btnSubmit1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnSubmit1.setText("Back");
         btnSubmit1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmit1ActionPerformed(evt);
             }
         });
-        add(btnSubmit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1109, 40, 150, 40));
-
-        jLabel4.setFont(new java.awt.Font("Microsoft JhengHei", 1, 18)); // NOI18N
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, 440, 320));
+        add(btnSubmit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 770, 190, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateAmbulanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAmbulanceActionPerformed
@@ -191,7 +184,6 @@ public class AmbulanceWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateAmbulance;
     private javax.swing.JButton btnSubmit1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
