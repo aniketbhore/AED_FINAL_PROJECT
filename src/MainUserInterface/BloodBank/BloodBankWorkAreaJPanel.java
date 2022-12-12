@@ -103,35 +103,34 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         btnTreatedPatientList = new javax.swing.JButton();
         btnBloodBankInfo = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 129, 190));
+        setBackground(new java.awt.Color(0, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Snell Library");
+        jLabel2.setText("BOOKSTORE");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1270, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1280, 10));
 
-        ManagePatientTable.setBackground(new java.awt.Color(204, 64, 86));
         ManagePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManagePatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity", "obj"
+                "User Name", "FellowshipId", "First", "Last", "Age", "Address", "Email", "Request Status", "Quantity"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -148,7 +147,7 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
 
         lblCommunity.setBackground(new java.awt.Color(255, 255, 255));
         lblCommunity.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblCommunity.setForeground(new java.awt.Color(204, 0, 0));
+        lblCommunity.setForeground(new java.awt.Color(255, 255, 255));
         lblCommunity.setText("Book Request Status");
         add(lblCommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, -1, 30));
 
@@ -160,7 +159,6 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         add(BloodRequestStatusBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 162, 30));
 
         btnProcessRequest.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnProcessRequest.setForeground(new java.awt.Color(204, 0, 0));
         btnProcessRequest.setText("Process Request");
         btnProcessRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,29 +169,28 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
 
         lblPatientBill.setBackground(new java.awt.Color(255, 255, 255));
         lblPatientBill.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        lblPatientBill.setForeground(new java.awt.Color(204, 0, 0));
+        lblPatientBill.setForeground(new java.awt.Color(255, 255, 255));
         lblPatientBill.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPatientBill.setText("BILLS");
         add(lblPatientBill, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 1270, 83));
 
-        BillTable.setBackground(new java.awt.Color(204, 64, 86));
         BillTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         BillTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Item Name", "Organization", "Amount", "obj"
+                "Item Name", "Organization", "Amount"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -209,7 +206,6 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 1160, 191));
 
         btnTreatedPatientList.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnTreatedPatientList.setForeground(new java.awt.Color(204, 0, 0));
         btnTreatedPatientList.setText("Show Treated Patient List");
         btnTreatedPatientList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +215,6 @@ public class BloodBankWorkAreaJPanel extends javax.swing.JPanel {
         add(btnTreatedPatientList, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 800, 300, 40));
 
         btnBloodBankInfo.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        btnBloodBankInfo.setForeground(new java.awt.Color(204, 0, 0));
         btnBloodBankInfo.setText("Blood Bank Information");
         btnBloodBankInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

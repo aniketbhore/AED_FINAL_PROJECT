@@ -62,41 +62,39 @@ public class TreatedPatientJPanel extends javax.swing.JPanel {
 
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         ManagePatientTable = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 129, 190));
+        setBackground(new java.awt.Color(0, 153, 153));
         setToolTipText("");
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("                REQUESTED PATIENTS HISTORY");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1260, 80));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1270, 10));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, 390, 350));
 
         ManagePatientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         ManagePatientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "User Name", "HealthId", "First", "Last", "Age", "Address", "Email", "Blood Request Status", "obj"
+                "User Name", "Id", "First", "Last", "Age", "Address", "Email", "Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -109,7 +107,7 @@ public class TreatedPatientJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(ManagePatientTable);
 
-        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 1260, 191));
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 1260, 191));
 
         btnBack.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         btnBack.setForeground(new java.awt.Color(0, 153, 204));
@@ -135,7 +133,6 @@ public class TreatedPatientJPanel extends javax.swing.JPanel {
     private javax.swing.JTable ManagePatientTable;
     private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables

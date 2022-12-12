@@ -3,7 +3,7 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-      <Color blue="be" green="81" red="ff" type="rgb"/>
+      <Color blue="ff" green="99" red="66" type="rgb"/>
     </Property>
   </Properties>
   <AuxValues>
@@ -29,7 +29,7 @@
           <Font name="Georgia" size="36" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="cc" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="FELLOWSHIP DEPARTMENT"/>
@@ -104,7 +104,7 @@
               <Connection code="new java.awt.Font(&quot;Trebuchet MS&quot;, 1, 12)" type="code"/>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="8" rowCount="4">
+              <Table columnCount="7" rowCount="4">
                 <Column editable="false" title="Name" type="java.lang.String"/>
                 <Column editable="false" title="Last" type="java.lang.String"/>
                 <Column editable="false" title="Bill Total" type="java.lang.Object"/>
@@ -112,16 +112,10 @@
                 <Column editable="true" title="Email" type="java.lang.Object"/>
                 <Column editable="true" title="Police Verification" type="java.lang.Object"/>
                 <Column editable="false" title="Fellowship Status" type="java.lang.Object"/>
-                <Column editable="false" title="obj" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>

@@ -90,13 +90,13 @@ public class PastCustomerInfo extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         talbleForBilling = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 129, 190));
+        setBackground(new java.awt.Color(102, 153, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Customer Status");
+        jLabel1.setText("Status");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 770, -1));
 
         txtpFirstName.setEditable(false);
@@ -150,49 +150,49 @@ public class PastCustomerInfo extends javax.swing.JPanel {
 
         lblInsStatus.setBackground(new java.awt.Color(255, 255, 255));
         lblInsStatus.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblInsStatus.setForeground(new java.awt.Color(204, 0, 0));
-        lblInsStatus.setText("Insurance Status");
-        add(lblInsStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 730, -1, -1));
+        lblInsStatus.setForeground(new java.awt.Color(255, 255, 255));
+        lblInsStatus.setText("Status");
+        add(lblInsStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 730, -1, -1));
 
         lblPPhone.setBackground(new java.awt.Color(255, 255, 255));
         lblPPhone.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPPhone.setForeground(new java.awt.Color(204, 0, 0));
+        lblPPhone.setForeground(new java.awt.Color(255, 255, 255));
         lblPPhone.setText("Phone Number");
         add(lblPPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 670, -1, -1));
 
         lblPGender.setBackground(new java.awt.Color(255, 255, 255));
         lblPGender.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPGender.setForeground(new java.awt.Color(204, 0, 0));
+        lblPGender.setForeground(new java.awt.Color(255, 255, 255));
         lblPGender.setText("Gender");
         add(lblPGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 610, 70, -1));
 
         lblPAge.setBackground(new java.awt.Color(255, 255, 255));
         lblPAge.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPAge.setForeground(new java.awt.Color(204, 0, 0));
+        lblPAge.setForeground(new java.awt.Color(255, 255, 255));
         lblPAge.setText("Age");
         add(lblPAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 550, 50, -1));
 
         lblPInsuranceID.setBackground(new java.awt.Color(255, 255, 255));
         lblPInsuranceID.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPInsuranceID.setForeground(new java.awt.Color(204, 0, 0));
-        lblPInsuranceID.setText("InsuranceID");
-        add(lblPInsuranceID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 720, 120, -1));
+        lblPInsuranceID.setForeground(new java.awt.Color(255, 255, 255));
+        lblPInsuranceID.setText("ID");
+        add(lblPInsuranceID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 720, 40, -1));
 
         lblPAddress.setBackground(new java.awt.Color(255, 255, 255));
         lblPAddress.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPAddress.setForeground(new java.awt.Color(204, 0, 0));
+        lblPAddress.setForeground(new java.awt.Color(255, 255, 255));
         lblPAddress.setText("Address");
         add(lblPAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 660, -1, -1));
 
         lblPLastName.setBackground(new java.awt.Color(255, 255, 255));
         lblPLastName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPLastName.setForeground(new java.awt.Color(204, 0, 0));
+        lblPLastName.setForeground(new java.awt.Color(255, 255, 255));
         lblPLastName.setText("Last Name");
         add(lblPLastName, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 600, 116, -1));
 
         lblPFirstName.setBackground(new java.awt.Color(255, 255, 255));
         lblPFirstName.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        lblPFirstName.setForeground(new java.awt.Color(204, 0, 0));
+        lblPFirstName.setForeground(new java.awt.Color(255, 255, 255));
         lblPFirstName.setText("First Name");
         add(lblPFirstName, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 116, -1));
 

@@ -70,7 +70,7 @@ private final JPanel userProcessContainer;
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
 
         ManageCustomersTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         ManageCustomersTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -105,7 +105,7 @@ private final JPanel userProcessContainer;
         lblManageCustomers.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
         lblManageCustomers.setForeground(new java.awt.Color(255, 255, 255));
         lblManageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblManageCustomers.setText("                      Manage Customers");
+        lblManageCustomers.setText("                      Manage ");
 
         btnSubmit.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 24)); // NOI18N
         btnSubmit.setForeground(new java.awt.Color(0, 153, 204));

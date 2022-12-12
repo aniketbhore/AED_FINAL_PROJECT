@@ -72,11 +72,11 @@ public class InsurancePastCustomers extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         patientTable = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 129, 190));
+        setBackground(new java.awt.Color(102, 153, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("FELLOWSHIP DEPARTMENT");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-160, 30, 1400, -1));
@@ -103,7 +103,6 @@ public class InsurancePastCustomers extends javax.swing.JPanel {
         add(backBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 430, 160, 60));
 
         patientTable.getTableHeader().setFont(new java.awt.Font("Trebuchet MS", 1, 16));
-        patientTable.setBackground(new java.awt.Color(204, 64, 86));
         patientTable.setFont(new java.awt.Font("Trebuchet MS", 1, 12));
         patientTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
